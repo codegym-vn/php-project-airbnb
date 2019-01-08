@@ -18,6 +18,7 @@ class CreateOrdersTable extends Migration
             $table->date('checkIn');
             $table->date('checkOut');
             $table->integer('totalPrice');
+            $table->timestamps();
         });
     }
 
