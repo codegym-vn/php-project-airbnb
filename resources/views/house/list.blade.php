@@ -31,11 +31,10 @@
                             <td>{{$house->price}}</td>
                             <td>{{$house->address}}</td>
                             <td>{{$house->status}}</td>
-                            <td><img src="{{'/upload/images/' . $house->image}}" style="height:200px" , width=200px></td>
+                            <td><img src="{{asset('storage/' . $house->image)}}" style="height:200px; width:200px"></td>
 
                             <td><a class="btn btn-success" href="{{ route('house.edit', $house->id) }}">sửa</a></td>
                             <td><a class="btn btn-danger" href="{{ route('house.destroy', $house->id) }}"
-                                   class="text-danger"
                                    onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
                         </tr>
                     @endforeach

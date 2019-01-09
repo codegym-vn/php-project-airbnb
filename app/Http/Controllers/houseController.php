@@ -47,12 +47,9 @@ class houseController extends Controller
         $house->address = $request->input('address');
         $house->status = $request->input('status');
         if ($request->hasFile('image')) {
-            if ($request->file('image')->isValid()) {
-                $image = $request->image;
-                $clientName = $image->getClientOriginalName();
-                $path = $image->move(public_path('upload/images/'), $clientName);
-                $house->image = $clientName;
-            }
+            $image = $request->image;
+            $path = $image->store('images', 'public');
+            $house->image = $path;
         }
         $house->save();
 
@@ -101,14 +98,16 @@ class houseController extends Controller
         $house->address = $request->input('address');
         $house->status = $request->input('status');
         if ($request->hasFile('image')) {
+
             $currentImg = $house->image;
             if ($currentImg) {
-                Storage::delete('upload/images/', $currentImg);
+                Storage::delete('/public/' . $currentImg);
             }
+
             $image = $request->image;
-            $clientName = $image->getClientOriginalName();
-            $image->move(public_path('upload/images', $clientName));
-            $house->image = $clientName;
+            $path = $image->store('images', 'public');
+            $house->image = $path;
+
         }
         $house->save();
 
@@ -125,6 +124,10 @@ class houseController extends Controller
     public function destroy($id)
     {
         $house = House::findOrFail($id);
+        $image = $house->image;
+        if ($image) {
+            Storage::delete('/public/' . $image);
+        }
         $house->delete();
 
         return redirect(route('house.index'));
