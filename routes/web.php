@@ -15,4 +15,12 @@
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/', 'houseController@index')->name('house.index');
+Route::group(['prefix' => 'house/admin'], function () {
+    Route::get('/', 'houseController@index')->name('house.index');
+    Route::get('/create', 'houseController@create')->name('house.create');
+    Route::post('/create', 'houseController@store')->name('house.store');
+    Route::get('/show/{id}', 'houseController@show')->name('house.show');
+    Route::get('/edit/{id}', 'houseController@edit')->name('house.edit');
+    Route::post('/edit/{id}', 'houseController@update')->name('house.update');
+    Route::get('/delete/{id}', 'houseController@destroy')->name('house.destroy');
+});

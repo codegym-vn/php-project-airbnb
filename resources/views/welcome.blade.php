@@ -73,21 +73,21 @@
     <div class="row">
         @foreach($houses as $key=>$house)
 
-        <div class="col-md-4">
-            <img class="card-img-top" src="https://cdn.luxstay.com/rooms/11930/large/1515401896_DSC_0516.jpg" alt=""
-                 style="width: 350px; height: 200px">
-            <div class="card-body">
-                <p>{{$house->title}}</p>
-                <p>{{$house->price . ' đ'}}</p>
+            <div class="col-md-4">
+                <img class="card-img-top" src="https://cdn.luxstay.com/rooms/11930/large/1515401896_DSC_0516.jpg" alt=""
+                     style="width: 350px; height: 200px">
+                <div class="card-body">
+                    <p>{{$house->title}}</p>
+                    <p>{{$house->price . ' đ'}}</p>
+                </div>
             </div>
-        </div>
         @endforeach
     </div>
     <textarea class="form-control" id="summary-ckeditor"></textarea>
 </div>
 <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
 <script>
-    CKEDITOR.replace( 'summary-ckeditor' );
+    CKEDITOR.replace('summary-ckeditor');
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
