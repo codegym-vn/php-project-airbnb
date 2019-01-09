@@ -70,24 +70,71 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+    <div>
+        <h5 class="text-uppercase font-weight-bold" style="margin-top: 30px; margin-bottom: 30px">Lựa chọn tốt
+            nhất </h5>
+
+    </div>
+
+
     <div class="row">
         @foreach($houses as $key=>$house)
 
-        <div class="col-md-4">
-            <img class="card-img-top" src="https://cdn.luxstay.com/rooms/11930/large/1515401896_DSC_0516.jpg" alt=""
-                 style="width: 350px; height: 200px">
-            <div class="card-body">
-                <p>{{$house->title}}</p>
-                <p>{{$house->price . ' đ'}}</p>
+            <div class="col-md-4">
+                <img class="card-img-top" src="https://cdn.luxstay.com/rooms/11930/large/1515401896_DSC_0516.jpg" alt=""
+                     style="width: 350px; height: 200px">
+                <div class="card-body">
+                    <p>{{$house->title}}</p>
+                    <p>{{$house->price . ' đ'}}</p>
+                </div>
             </div>
-        </div>
         @endforeach
+
+        <div class="row">
+            @foreach($houses as $key=>$house)
+
+                <div class="col-md-4">
+                    <img class="card-img-top" src="https://cdn.luxstay.com/rooms/11930/large/1515401896_DSC_0516.jpg"
+                         alt=""
+                         style="width: 350px; height: 200px">
+                    <div class="card-body">
+                        <p>{{$house->title}}</p>
+                        <p>{{$house->price . ' đ'}}</p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
+
+        <div>
+            <h4 class="td-block-title"><span class="td-pulldown-size">BÀI VIẾT MỚI NHẤT</span></h4>
+
+        </div>
+
+        <div class="row" style="margin-bottom: 50px">
+            @foreach($houses as $key=>$house)
+
+                <div class="col-md-4" style="margin-top: 5px">
+                    <img class="card-img-top" src="https://cdn.luxstay.com/rooms/11930/large/1515401896_DSC_0516.jpg"
+                         alt=""
+                         style="width: 350px; height: 200px">
+                </div>
+
+            @endforeach
+
+
+        </div>
+
     </div>
-    <textarea class="form-control" id="summary-ckeditor"></textarea>
+
+
+    {{--<textarea class="form-control" id="summary-ckeditor"></textarea>--}}
 </div>
+
+
 <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
 <script>
-    CKEDITOR.replace( 'summary-ckeditor' );
+    CKEDITOR.replace('summary-ckeditor');
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -97,6 +144,127 @@
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+
+</script>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark">
+
+    <div style="background-color: #6351ce;">
+        <div class="container">
+            <!-- Grid row-->
+            <div class="row py-4 d-flex align-items-center">
+            </div>
+            <!-- Grid column -->
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+
+        <!-- Grid row -->
+        <div class="row mt-3">
+
+            <div class="section col-md-4">
+                <a class="td-header-logo td-sticky-disable" href="https://coinvn247.com/">
+                    <img class="td-retina-data"
+                         data-retina="http://coinvn247.com/wp-content/uploads/2019/01/coinvn247logo.png"
+                         src="http://coinvn247.com/wp-content/uploads/2019/01/coinvn247logo.png" height="150px"
+                         width="150px" alt="">
+                </a>
+                <div>
+                    <ul class="footerNavLinks">
+                        <li class="socials">
+                            <a href="#!"><img
+                                        src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-facebook.png"
+                                        alt="Facebook"></a>
+                            <a href="#!"><img
+                                        src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-youtube.png"
+                                        alt="Youtube"></a>
+                            <a href="#!"><img
+                                        src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-telegram.png"
+                                        alt="Telegram"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Hỗ trợ</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a href="#!">Câu hỏi thường </a>
+                </p>
+                <p>
+                    <a href="#!">Chính sách hủy</a>
+                </p>
+                <p>
+                    <a href="#!">Hướng dẫn đặt phòng</a>
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Cẩm nang du lịch </h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a href="#!">Đà Lạt </a>
+                </p>
+                <p>
+                    <a href="#!">Đà Nẵng </a>
+                </p>
+                <p>
+                    <a href="#!">SaPa </a>
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <i class="fas fa-home mr-3"></i> CodeGym, My Dinh, Ha </p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i> codegym@gmail.com</p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i> + 08 234 567 88</p>
+                <p>
+                    <i class="fas fa-print mr-3"></i> + 08 234 567 89</p>
+
+
+            </div>
+
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="#!"> Team CC </a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
 </body>
 </html>

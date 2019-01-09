@@ -65,5 +65,6 @@ class houseSeeder extends Seeder
         $house->status = 'Chưa cho thuê';
         $house->image = '';
         $house->save();
+
     }
 }
