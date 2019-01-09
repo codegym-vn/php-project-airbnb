@@ -27,6 +27,7 @@ class houseSeeder extends Seeder
         $house->address = 'Hoàng Quốc Việt - Hạ Long Bay';
         $house->status = 'Chưa cho thuê';
         $house->image = '';
+        $house->user_id = 1;
         $house->save();
 
         $house = new House();
@@ -46,6 +47,7 @@ class houseSeeder extends Seeder
         $house->address = 'Sóc Sơn - Hà Nội';
         $house->status = 'Đã thuê';
         $house->image = '';
+        $house->user_id = 1;
         $house->save();
 
         $house = new House();
@@ -64,6 +66,7 @@ class houseSeeder extends Seeder
         $house->address = 'Hoàng Quốc Việt - Hạ Long Bay';
         $house->status = 'Chưa cho thuê';
         $house->image = '';
+        $house->user_id = 1;
         $house->save();
     }
 }
