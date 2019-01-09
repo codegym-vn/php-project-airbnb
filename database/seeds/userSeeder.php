@@ -19,5 +19,21 @@ class userSeeder extends Seeder
         $user->phone = '0976681499';
         $user->role = '1';
         $user->save();
+
+        $user = new \App\User();
+        $user->name = 'Lê Thị Mỹ Hoàn';
+        $user->email = 'manhsanhcong.08@gmail.com';
+        $user->password = Hash::make('manhsanhcong');
+        $user->phone = '5664133150';
+        $user->role = '1';
+        $user->save();
+
+        $user = new \App\User();
+        $user->name = 'ban tam';
+        $user->email = 'abc@gmail.com';
+        $user->password = Hash::make('asdasd');
+        $user->phone = '0976681499';
+        $user->role = '1';
+        $user->save();
     }
 }
