@@ -15,6 +15,9 @@
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::group(['prefix' => 'house/admin'], function () {
     Route::get('/', 'houseController@index')->name('house.index');
     Route::get('/create', 'houseController@create')->name('house.create');
