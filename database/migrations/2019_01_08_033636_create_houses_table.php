@@ -15,13 +15,13 @@ class CreateHousesTable extends Migration
     {
         Schema::create('houses', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title')->nullable();
-            $table->text('description')->nullable();
-            $table->text('content')->nullable();
-            $table->integer('price')->nullable();
-            $table->string('address')->nullable();
-            $table->string('status')->nullable();
-            $table->text('image')->nullable();
+            $table->string('title');
+            $table->text('description');
+            $table->text('content');
+            $table->integer('price');
+            $table->string('address');
+            $table->string('status');
+            $table->text('image');
             $table->timestamps();
         });
     }
