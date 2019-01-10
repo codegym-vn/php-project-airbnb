@@ -83,8 +83,8 @@
                             <tr>
                                 <th scope="row"{{++$key}}></th>
                                 <td>{{$house->title}}</td>
-                                <td>{{$house->description}}</td>
-                                <td>{{$house->content}}</td>
+                                <td>{!! $house->description !!}</td>
+                                <td>{!!$house->content!!}</td>
                                 <td>{{$house->price}}</td>
                                 <td>{{$house->address}}</td>
                                 <td>{{$house->status}}</td>

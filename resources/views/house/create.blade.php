@@ -36,7 +36,7 @@
                                 CKEDITOR.replace('content');
                             </script>
                             @if($errors->has('content'))
-                                    <p class="help is-danger" style="color: red;">{{ $errors->first('content') }}</p>
+                                <p class="help is-danger" style="color: red;">{{ $errors->first('content') }}</p>
                             @endif
                         </div>
                         <div class="form-group">
@@ -67,10 +67,11 @@
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
                             @endif
                         </div>
-                    <button type="submit" class="btn btn-primary">Thêm mới</button>
-                    <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Quay lại</button>
-                </form>
+                        <button type="submit" class="btn btn-primary">Thêm mới</button>
+                        <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Quay lại
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 @endsection
