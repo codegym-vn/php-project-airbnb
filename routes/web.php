@@ -18,6 +18,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('auth/facebook', 'FacebookAuthController@redirectToProvider')->name('facebook.login') ;
+Route::get('auth/facebook/callback', 'FacebookAuthController@handleProviderCallback');
 Route::group(['prefix' => 'house/admin'], function () {
     Route::get('/', 'houseController@index')->name('house.index');
     Route::get('/create', 'houseController@create')->name('house.create');
