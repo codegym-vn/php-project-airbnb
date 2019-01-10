@@ -22,7 +22,7 @@ class houseController extends Controller
      */
     public function index()
     {
-        $houses = House::all();
+        $houses = House::paginate(3);
         return view('house.list', compact('houses'));
     }
 
@@ -144,7 +144,7 @@ class houseController extends Controller
         if (!$keyword) {
             return redirect()->route('house.index');
         }
-        $houses = House::where('title', 'LIKE', '%' . $keyword. '%')->get();
+        $houses = House::where('title', 'LIKE', '%' . $keyword. '%')->paginate(3);
 
         return view('house.list', compact('houses'));
     }

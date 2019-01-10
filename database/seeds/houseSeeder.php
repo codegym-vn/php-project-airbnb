@@ -45,7 +45,7 @@ class houseSeeder extends Seeder
                            Nơi đây như một tòa lâu đài nhỏ nhắn ẩn mình giữa cỏ cây hoa lá, có cả một sân vườn đầy hoa trái và những bãi cỏ xanh mướt trải dài.';
         $house->price = '2300000';
         $house->address = 'Sóc Sơn - Hà Nội';
-        $house->status = 'Đã thuê';
+        $house->status = 'Đã cho thuê';
         $house->image = '';
         $house->user_id = 1;
         $house->save();
@@ -63,7 +63,44 @@ class houseSeeder extends Seeder
                            Căn hộ có sân hiên.
                            Mũi Nghinh Phong cách Bi Home 1,9 km. Sân bay Quốc tế Tân Sơn Nhất cách đó 72 km.';
         $house->price = '900000';
-        $house->address = 'Hoàng Quốc Việt - Hạ Long Bay';
+        $house->address = '23 - Full City - Vũng Tàu';
+        $house->status = 'Chưa cho thuê';
+        $house->image = '';
+        $house->user_id = 1;
+        $house->save();
+
+        $house = new House();
+        $house->title = "Le Bleu Đà Lạt - Vintage Wooden House";
+        $house->description = '2 phòng master khép kín.
+                               1 phòng ngủ nhỏ.
+                               1 phòng lớn với 2 đệm đôi.
+                               Phòng bếp rộng rãi đầy đủ tiện nghi.
+                               2 phòng tắm.';
+        $house->content = ' Le Bleu đầy tự hào khi được xuất hiện trong nỗi nhớ về Đà Lạt của những bạn khách vô cùng đáng yêu
+                            Nơi đây cung cấp cho bạn đầy đủ những nội thất tiện nghi và thoải mái
+                            Bạn có thể tổ chức những bữa tiệc nước nướng BBQ ngoài trời
+                            Các căn phòng đều có cửa sổ để bạn có thể gần hơn với thiên nhiên';
+        $house->price = '1500000';
+        $house->address = '15 - Vintage Wooden House - Đà Lạt';
+        $house->status = 'Đã cho thuê';
+        $house->image = '';
+        $house->user_id = 1;
+        $house->save();
+
+        $house = new House();
+        $house->title = 'Maika Condohotel';
+        $house->description = '02 phòng ngủ
+                               01 phòng khách
+                               01 phòng bếp
+                               Căn hộ gần chợ , gần Hồ Xuân Hương , gần Lotte, siêu thị điện thoại ...';
+        $house->content = 'Maika Condohotel cung cấp chỗ ở với Wi-Fi miễn phí, cách Nhà Thờ Salesian Don Bosco: 228 m.
+                           Căn hộ có nhà bếp với tủ lạnh, TV màn hình phẳng, khu vực tiếp khách và phòng tắm với bồn rửa vệ sinh.
+                           Phòng tắm đi kèm vòi sen, máy giặt, đồ vệ sinh cá nhân miễn phí và máy sấy tóc.
+                           Và một số điểm ăn uống: Sữa Đậu Nành - Phan Bội Châu: 54 m, Quán Cơm - Lẩu: 68 m, 
+                           Cháo Đêm - Phan Bội Châu: 81 m, Bắp Luộc: 82 m
+                           ,Tiệm Cơm Sài Gòn 2 - Phan Bội Châu: 84 m';
+        $house->price = '900000';
+        $house->address = '45 - Phan Bội Châu - Đà Lạt';
         $house->status = 'Chưa cho thuê';
         $house->image = '';
         $house->user_id = 1;
