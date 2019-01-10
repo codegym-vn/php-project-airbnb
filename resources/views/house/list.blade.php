@@ -65,10 +65,10 @@
                     <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Image</th>
+                        <th scope="col">Tiêu đề</th>
+                        <th scope="col">Giá phòng</th>
+                        <th scope="col">Trạng thái</th>
+                        <th scope="col">Ảnh</th>
                     </tr>
                     </thead>
                     @if(count($houses) == 0)
