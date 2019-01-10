@@ -12,7 +12,6 @@
 <body>
 <div class="container">
 
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span>Trang chủ</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -40,7 +39,141 @@
         </div>
 
     </nav>
+    <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="10000">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(50).jpg"
+                     alt="First slide"></div>
+            <div class="carousel-item" data-interval="2000">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(11).jpg"
+                     alt="First slide"></div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(55).jpg"
+                     alt="First slide"></div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(119).jpg"
+                     alt="First slide"></div>
+            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
 
+    <div style="margin-top: 50px">
+        <!-- Footer -->
+        <footer class="page-footer font-small unique-color-dark">
+
+            <div style="background-color: #6351ce;">
+                <div class="container">
+
+                    <div class="row d-flex align-items-center">
+                        <!-- Grid column -->
+                        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                            <h5 class="mb-0">Theo dõi chúng tôi !</h5>
+                        </div>
+                        <!-- Grid row-->
+                        <div class="d-flex flex-row-reverse" style="margin-top: 5px">
+                            <!-- Grid column -->
+                            <ul class="footerNavLinks">
+                                <a href="#!"><img
+                                            src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-facebook.png"
+                                            alt="Facebook"></a>
+                                <a href="#!"><img
+                                            src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-youtube.png"
+                                            alt="Youtube"></a>
+                                <a href="#!"><img
+                                            src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-telegram.png"
+                                            alt="Telegram"></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid column -->
+            </div>
+
+
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left mt-5">
+
+
+                <!-- Grid row -->
+                <div class="row mt-3">
+
+                    <div class="section col-md-4">
+                        <a class="td-header-logo td-sticky-disable" href="https://coinvn247.com/">
+                            <img class="td-retina-data"
+
+                                 src="https://coinvn247.com/wp-content/uploads/2019/01/homecodegum.png" height="150px"
+                                 width="265px" alt="">
+                        </a>
+                    </div>
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Hỗ trợ</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <a href="#!">Câu hỏi thường </a>
+                        </p>
+                        <p>
+                            <a href="#!">Chính sách hủy</a>
+                        </p>
+                        <p>
+                            <a href="#!">Hướng dẫn đặt phòng</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Cẩm nang du lịch </h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <a href="#!">Đà Lạt </a>
+                        </p>
+                        <p>
+                            <a href="#!">Đà Nẵng </a>
+                        </p>
+                        <p>
+                            <a href="#!">SaPa </a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <i class="fas fa-home mr-3"></i> CodeGym, Mỹ Đình, Hà Nội </p>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i> codegym@gmail.com</p>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i> + 08 234 567 88</p>
+                        <p>
+                            <i class="fas fa-print mr-3"></i> + 08 234 567 89</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a href="#!">Bản quyền thuộc về Team CC </a>
+            </div>
+        </footer>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

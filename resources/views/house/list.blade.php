@@ -98,6 +98,9 @@
                     </div>
                 </table>
             </div>
+            <div class="pagination float-lg-right">
+                {{ $houses->links() }}
+            </div>
         </div>
     </div>
 @endsection
