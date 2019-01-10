@@ -80,10 +80,6 @@
                             <tr>
                                 <th scope="row"{{++$key}}></th>
                                 <td>{{$house->title}}</td>
-
-                                <td>{!! $house->description !!}</td>
-                                <td>{!!$house->content!!}</td>
-
                                 <td>{{$house->price}}</td>
                                 <td>{{$house->status}}</td>
                                 <td><img src="{{asset('storage/' . $house->image)}}" style="height:200px; width:200px">
