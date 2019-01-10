@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +10,15 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
+
 <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light" style="color: #fcfcfc">
+        <a class="td-header-logo td-sticky-disable" href="https://coinvn247.com/">
+            <img class="td-retina-data"
 
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span>Trang chủ</a>
+                 src="https://coinvn247.com/wp-content/uploads/2019/01/codegym.png" height="100px"
+                 width="160px" alt="">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,6 +44,8 @@
         </div>
 
     </nav>
+</div>
+<div class="container-fluid">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -49,16 +56,16 @@
             <div class="carousel-item active">
                 <img class="d-block w-100"
                      src="https://cdn.luxstay.com/rooms/12043/large/1518430184_Phong_kh%C3%A1ch_(Toan_canh).jpg"
-                     alt="First slide" style="height: 400px; width: 300px">
+                     alt="First slide" style="height: 800px; width: 300px">
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="https://cdn.luxstay.com/rooms/15176/large/1537408618_IMG_7906.jpg"
-                     alt="Second slide" style="height: 400px; width: 300px">
+                     alt="Second slide" style="height: 800px; width: 300px">
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100"
                      src="https://cdn.luxstay.com/rooms/14436/large/1534908497_image_6483441%20(11).JPG"
-                     alt="Third slide" style="height: 400px; width: 300px">
+                     alt="Third slide" style="height: 800px; width: 300px">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -70,6 +77,9 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+</div>
+
+<div class="container">
     <div>
         <h5 class="text-uppercase font-weight-bold" style="margin-top: 30px; margin-bottom: 30px">Lựa chọn tốt
             nhất </h5>
@@ -107,8 +117,7 @@
 
 
         <div>
-            <h4 class="td-block-title"><span class="td-pulldown-size">BÀI VIẾT MỚI NHẤT</span></h4>
-
+            <h5 class="text-uppercase font-weight-bold" style="margin-top: 30px; margin-bottom: 30px">Điểm đến hàng đầu  </h5>
         </div>
 
         <div class="row" style="margin-bottom: 50px">
@@ -126,10 +135,10 @@
         </div>
 
     </div>
-
-
-    {{--<textarea class="form-control" id="summary-ckeditor"></textarea>--}}
 </div>
+
+
+{{--<textarea class="form-control" id="summary-ckeditor"></textarea>--}}
 
 
 <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
@@ -148,37 +157,22 @@
 
 </script>
 
+<div>
+    <!-- Footer -->
+    <footer class="page-footer font-small unique-color-dark">
 
-<!-- Footer -->
-<footer class="page-footer font-small unique-color-dark">
+        <div style="background-color: #6351ce;">
+            <div class="container">
 
-    <div style="background-color: #6351ce;">
-        <div class="container">
-            <!-- Grid row-->
-            <div class="row py-4 d-flex align-items-center">
-            </div>
-            <!-- Grid column -->
-        </div>
-    </div>
-    </div>
-
-    <!-- Footer Links -->
-    <div class="container text-center text-md-left mt-5">
-
-
-        <!-- Grid row -->
-        <div class="row mt-3">
-
-            <div class="section col-md-4">
-                <a class="td-header-logo td-sticky-disable" href="https://coinvn247.com/">
-                    <img class="td-retina-data"
-                         data-retina="http://coinvn247.com/wp-content/uploads/2019/01/coinvn247logo.png"
-                         src="http://coinvn247.com/wp-content/uploads/2019/01/coinvn247logo.png" height="150px"
-                         width="150px" alt="">
-                </a>
-                <div>
-                    <ul class="footerNavLinks">
-                        <li class="socials">
+                <div class="row d-flex align-items-center">
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h5 class="mb-0">Theo dõi chúng tôi !</h5>
+                    </div>
+                    <!-- Grid row-->
+                    <div class="d-flex flex-row-reverse" style="margin-top: 5px">
+                        <!-- Grid column -->
+                        <ul class="footerNavLinks">
                             <a href="#!"><img
                                         src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-facebook.png"
                                         alt="Facebook"></a>
@@ -188,83 +182,102 @@
                             <a href="#!"><img
                                         src="https://tiendientu.org/wp-content/themes/tdt/assets/images/icon-telegram.png"
                                         alt="Telegram"></a>
-                        </li>
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
             <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        </div>
 
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Hỗ trợ</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <a href="#!">Câu hỏi thường </a>
-                </p>
-                <p>
-                    <a href="#!">Chính sách hủy</a>
-                </p>
-                <p>
-                    <a href="#!">Hướng dẫn đặt phòng</a>
-                </p>
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+
+
+            <!-- Grid row -->
+            <div class="row mt-3">
+
+                <div class="section col-md-4">
+                    <a class="td-header-logo td-sticky-disable" href="https://coinvn247.com/">
+                        <img class="td-retina-data"
+
+                             src="https://coinvn247.com/wp-content/uploads/2019/01/homecodegum.png" height="150px"
+                             width="265px" alt="">
+                    </a>
+                </div>
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Hỗ trợ</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Câu hỏi thường </a>
+                    </p>
+                    <p>
+                        <a href="#!">Chính sách hủy</a>
+                    </p>
+                    <p>
+                        <a href="#!">Hướng dẫn đặt phòng</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Cẩm nang du lịch </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Đà Lạt </a>
+                    </p>
+                    <p>
+                        <a href="#!">Đà Nẵng </a>
+                    </p>
+                    <p>
+                        <a href="#!">SaPa </a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> CodeGym, My Dinh, Ha </p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> codegym@gmail.com</p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> + 08 234 567 88</p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> + 08 234 567 89</p>
+
+                </div>
+
+                <!-- Grid column -->
 
             </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Cẩm nang du lịch </h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <a href="#!">Đà Lạt </a>
-                </p>
-                <p>
-                    <a href="#!">Đà Nẵng </a>
-                </p>
-                <p>
-                    <a href="#!">SaPa </a>
-                </p>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <i class="fas fa-home mr-3"></i> CodeGym, My Dinh, Ha </p>
-                <p>
-                    <i class="fas fa-envelope mr-3"></i> codegym@gmail.com</p>
-                <p>
-                    <i class="fas fa-phone mr-3"></i> + 08 234 567 88</p>
-                <p>
-                    <i class="fas fa-print mr-3"></i> + 08 234 567 89</p>
-
-
-            </div>
-
-            <!-- Grid column -->
+            <!-- Grid row -->
 
         </div>
-        <!-- Grid row -->
+        <!-- Footer Links -->
 
-    </div>
-    <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#!">Bản quyền thuộc về Team CC </a>
+        </div>
+        <!-- Copyright -->
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="#!"> Team CC </a>
-    </div>
-    <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
+    </footer>
+    <!-- Footer -->
+</div>
 
 </body>
 </html>
