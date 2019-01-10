@@ -137,4 +137,15 @@ class houseController extends Controller
 
         return redirect(route('house.index'));
     }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+        if (!$keyword) {
+            return redirect()->route('house.index');
+        }
+        $houses = House::where('title', 'LIKE', '%' . $keyword. '%')->get();
+
+        return view('house.list', compact('houses'));
+    }
 }

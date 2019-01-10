@@ -67,11 +67,9 @@
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
                             @endif
                         </div>
-
-                        <button type="submit" class="btn btn-primary">Create</button>
-                        <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Cancel</button>
-                    </form>
-                </div>
+                    <button type="submit" class="btn btn-primary">Thêm mới</button>
+                    <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Quay lại</button>
+                </form>
             </div>
         </div>
     </div>
