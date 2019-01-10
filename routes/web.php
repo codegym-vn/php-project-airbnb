@@ -26,4 +26,5 @@ Route::group(['prefix' => 'house/admin'], function () {
     Route::get('/edit/{id}', 'houseController@edit')->name('house.edit');
     Route::post('/edit/{id}', 'houseController@update')->name('house.update');
     Route::get('/delete/{id}', 'houseController@destroy')->name('house.destroy');
+    Route::get('/search', 'houseController@search')->name('house.search');
 });

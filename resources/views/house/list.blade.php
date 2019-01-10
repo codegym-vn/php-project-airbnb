@@ -21,7 +21,8 @@
                 @endif
             @else
                 <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
 
@@ -44,6 +45,22 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-12"><h1 style="text-align: center">My House</h1></div>
+                <div class="col-6">
+                    <form class="navbar-form navbar-right" action="{{ route('house.search') }}" method="get">
+                        @csrf
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="keyword" placeholder="Search"
+                                           value="{{ (isset($_GET['keyword'])) ? $_GET['keyword'] : '' }}">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-info">Tìm kiếm</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -74,14 +91,17 @@
                                 <td><img src="{{asset('storage/' . $house->image)}}" style="height:200px; width:200px">
                                 </td>
 
-                                <td><a class="btn btn-success" href="{{ route('house.edit', $house->id) }}">sửa</a></td>
+                                <td><a class="btn btn-success" href="{{ route('house.edit', $house->id) }}">Sửa</a></td>
                                 <td><a class="btn btn-danger" href="{{ route('house.destroy', $house->id) }}"
-                                       onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
+                                       onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a></td>
                             </tr>
                         @endforeach
                     @endif
                 </table>
-                <a class="btn btn-primary" href="{{ route('house.create') }}">Thêm mới</a>
+                <div>
+                    <a class="btn btn-primary" href="{{ route('house.create') }}">Thêm mới</a>
+                    <a class="btn btn-dark" href="{{ route('house.index') }}">Quay lại</a>
+                </div>
             </div>
         </div>
     </div>
