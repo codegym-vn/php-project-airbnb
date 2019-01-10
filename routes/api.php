@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'house'], function () {
+    Route::get('/', 'customerController@index')->name('customer.index');
+    Route::put('/order', 'customerController@order')->name('customer.order');
 });
