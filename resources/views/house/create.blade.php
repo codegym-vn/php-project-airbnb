@@ -5,20 +5,20 @@
         <div class="col-12 col-md-12">
             <div class="row">
                 <div class="col-12">
-                    <h1>Create new houses</h1>
+                    <h1>Bài viết mới</h1>
                 </div>
                 <div class="col-12">
                     <form method="post" action="{{route('house.store')}}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label>title</label>
+                            <label>Tiêu đề</label>
                             <input type="text" name="title" class="form-control"/>
                             @if($errors->has('title'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('title') }}</p>
                             @endif
                         </div>
                         <div class="form-group">
-                            <label>description</label>
+                            <label>Mô tả</label>
                             <textarea name="description" class="form-control" id="description"></textarea>
                             <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
                             <script>
@@ -29,7 +29,7 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label>content</label>
+                            <label>Nội dung</label>
                             <textarea name="content" class="form-control" id="content"></textarea>
                             <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
                             <script>
@@ -40,28 +40,24 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label>price</label>
-                            <textarea name="price" class="form-control"></textarea>
+                            <label>Giá phòng</label>
+                            <input type="number" name="price" class="form-control">
                             @if($errors->has('price'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('price') }}</p>
                             @endif
                         </div>
                         <div class="form-group">
-                            <label>address</label>
-                            <input type="text" name="address" class="form-control"/>
+                            <input type="hidden" name="status" class="form-control" value="Chưa cho thuê">
+                        </div>
+                        <div class="form-group">
+                            <label>Địa chỉ</label>
+                            <textarea type="text" name="address" class="form-control"></textarea>
                             @if($errors->has('address'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('address') }}</p>
                             @endif
                         </div>
                         <div class="form-group">
-                            <label>status</label>
-                            <input type="text" name="status" class="form-control"/>
-                            @if($errors->has('status'))
-                                <p class="help is-danger" style="color: red;">{{ $errors->first('status') }}</p>
-                            @endif
-                        </div>
-                        <div class="form-group">
-                            <label>image</label>
+                            <label>Ảnh</label>
                             <input type="file" name="image" class="form-control-file">
                             @if($errors->has('image'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
