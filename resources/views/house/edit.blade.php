@@ -14,14 +14,28 @@
                         <label>Title</label>
                         <input type="text" name="title" value="{{$house->title}}"
                                class="form-control"/>
+                        @if($errors->has('title'))
+                            <p class="help is-danger" style="color: red;">{{ $errors->first('title') }}</p>
+                        @endif
                     </div>
                     <div class="form-group">
                         <label>Description</label>
-                        <textarea name="description" class="form-control">{{$house->description}}</textarea>
+                        <textarea name="description" class="form-control" id="description">{{$house->description}}</textarea>
+                        <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+                        <script>
+                            CKEDITOR.replace('description');
+                        </script>
+                        @if($errors->has('description'))
+                            <p class="help is-danger" style="color: red;">{{ $errors->first('description') }}</p>
+                        @endif
                     </div>
                     <div class="form-group">
                         <label>Content</label>
-                        <textarea name="content" class="form-control">{{$house->content}}</textarea>
+                        <textarea name="content" class="form-control" id="content">{{$house->content}}</textarea>
+                        <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+                        <script>
+                            CKEDITOR.replace('content');
+                        </script>
                         @if($errors->has('content'))
                             <p class="help is-danger" style="color: red;">{{ $errors->first('content') }}</p>
                         @endif
@@ -29,6 +43,9 @@
                     <div class="form-group">
                         <label>Price</label>
                         <input type="text" name="price" value="{{$house->price}}"class="form-control"/>
+                        @if($errors->has('price'))
+                            <p class="help is-danger" style="color: red;">{{ $errors->first('price') }}</p>
+                        @endif
                     </div>
                     <div class="form-group">
                         <label>Address</label>

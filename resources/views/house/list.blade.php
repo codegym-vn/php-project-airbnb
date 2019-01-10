@@ -66,10 +66,7 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Title</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Content</th>
                         <th scope="col">Price</th>
-                        <th scope="col">Address</th>
                         <th scope="col">Status</th>
                         <th scope="col">Image</th>
                     </tr>
@@ -83,25 +80,23 @@
                             <tr>
                                 <th scope="row"{{++$key}}></th>
                                 <td>{{$house->title}}</td>
-                                <td>{{$house->description}}</td>
-                                <td>{{$house->content}}</td>
                                 <td>{{$house->price}}</td>
-                                <td>{{$house->address}}</td>
                                 <td>{{$house->status}}</td>
                                 <td><img src="{{asset('storage/' . $house->image)}}" style="height:200px; width:200px">
                                 </td>
 
-                                <td><a class="btn btn-success" href="{{ route('house.edit', $house->id) }}">Sửa</a></td>
-                                <td><a class="btn btn-danger" href="{{ route('house.destroy', $house->id) }}"
+                                <td><a class="btn btn-outline-success" href="{{ route('house.edit', $house->id) }}">Sửa</a></td>
+                                <td><a class="btn btn-outline-danger" href="{{ route('house.destroy', $house->id) }}"
                                        onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a></td>
+                                <td><a class="btn btn-outline-primary" href="{{ route('house.show', $house->id) }}">Xem</a></td>
+
                             </tr>
                         @endforeach
                     @endif
+                    <div class="col-6">
+                        <a class="btn btn-primary float-right" href="{{ route('house.create') }}">Thêm mới</a>
+                    </div>
                 </table>
-                <div>
-                    <a class="btn btn-primary" href="{{ route('house.create') }}">Thêm mới</a>
-                    <a class="btn btn-dark" href="{{ route('house.index') }}">Quay lại</a>
-                </div>
             </div>
         </div>
     </div>
