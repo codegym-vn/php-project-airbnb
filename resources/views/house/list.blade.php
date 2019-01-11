@@ -79,17 +79,11 @@
                         @foreach($houses as $key => $house)
                             <tr>
                                 <th scope="row"{{++$key}}></th>
-                                <td>{{$house->title}}</td>
+                                <td><a href="{{ route('house.show', $house->id) }}">{{$house->title}}</a></td>
                                 <td>{{$house->price . 'đ'}}</td>
                                 <td>{{$house->status}}</td>
                                 <td><img src="http://127.0.0.1:8000/storage/{{$house->image}}" style="height:200px; width:200px">
                                 </td>
-
-                                <td><a class="btn btn-outline-success" href="{{ route('house.edit', $house->id) }}">Sửa</a></td>
-                                <td><a class="btn btn-outline-danger" href="{{ route('house.destroy', $house->id) }}"
-                                       onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a></td>
-                                <td><a class="btn btn-outline-primary" href="{{ route('house.show', $house->id) }}">Xem</a></td>
-
                             </tr>
                         @endforeach
                     @endif
