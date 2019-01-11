@@ -46,20 +46,26 @@
             <div class="row">
                 <div class="col-12"><h1 style="text-align: center">My House</h1></div>
                 <div>
-                        <h4 scope="col">Tiêu đề :</h4>
-                        <p>{{$house->title}}</p>
-                        <h4 scope="col">Mô tả :</h4>
-                        <p>{!! $house->description !!}</p>
-                        <h4 scope="col">Nội dung :</h4>
-                        <p>{!! $house->content !!}</p>
-                        <h4 scope="col">Giá phòng :</h4>
-                        <p>{{$house->price}}</p>
-                        <h4 scope="col">Địa chỉ :</h4>
-                        <p>{{$house->address}}</p>
-                        <h4 scope="col">Trạng thái :</h4>
-                        <p>{{$house->status}}</p>
-                        <h4 scope="col">Ảnh :</h4>
-                        <p><img src="{{asset('storage/' . $house->image)}}" style="height:200px; width:200px"></p>
+                    <div class="col-12" style="margin-left: 1000px">
+                        <a class="btn btn-success" href="{{ route('house.edit', $house->id) }}">Sửa</a>
+                        <a class="btn btn-danger" href="{{ route('house.destroy', $house->id) }}"
+                           onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a>
+
+                    </div>
+                    <h4 scope="col">Tiêu đề :</h4>
+                    <p>{{$house->title}}</p>
+                    <h4 scope="col">Mô tả :</h4>
+                    <p>{!! $house->description !!}</p>
+                    <h4 scope="col">Nội dung :</h4>
+                    <p>{!! $house->content !!}</p>
+                    <h4 scope="col">Giá phòng :</h4>
+                    <p>{{$house->price}}</p>
+                    <h4 scope="col">Địa chỉ :</h4>
+                    <p>{{$house->address}}</p>
+                    <h4 scope="col">Trạng thái :</h4>
+                    <p>{{$house->status}}</p>
+                    <h4 scope="col">Ảnh :</h4>
+                    <p><img src="{{asset('storage/' . $house->image)}}" style="height:200px; width:200px"></p>
 
                 </div>
             </div>
