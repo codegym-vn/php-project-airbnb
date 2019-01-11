@@ -82,7 +82,7 @@
                                 <td>{{$house->title}}</td>
                                 <td>{{$house->price}}</td>
                                 <td>{{$house->status}}</td>
-                                <td><img src="{{asset('storage/' . $house->image)}}" style="height:200px; width:200px">
+                                <td><img src="http://127.0.0.1:8000/storage/{{$house->image}}" style="height:200px; width:200px">
                                 </td>
 
                                 <td><a class="btn btn-outline-success" href="{{ route('house.edit', $house->id) }}">Sửa</a></td>
