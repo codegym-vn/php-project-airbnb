@@ -13,6 +13,11 @@ class customerController extends Controller
         return House::get();
     }
 
+    public function show($id)
+    {
+        return House::find($id);
+    }
+
     public function order(Request $request, $id)
     {
         $customer = new User();

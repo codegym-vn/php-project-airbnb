@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 */
 
 Route::group(['prefix' => 'house'], function () {
-    Route::get('/', 'customerController@index')->name('customer.index');
-    Route::put('/order', 'customerController@order')->name('customer.order');
+    Route::get('/', 'customerController@index');
+    Route::get('/{id}', 'customerController@show');
+    Route::put('/order', 'customerController@order');
 });
