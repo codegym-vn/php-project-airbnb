@@ -52,6 +52,14 @@
                            onclick="return confirm('Bạn chắc chắn muốn xóa?')">Xóa</a>
 
                     </div>
+                    <div class="col-12">
+                        @if (Session::has('success'))
+                            <p class="text-success">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                {{ Session::get('success') }}
+                            </p>
+                        @endif
+                    </div>
                     <h4 scope="col">Tiêu đề :</h4>
                     <p>{{$house->title}}</p>
                     <h4 scope="col">Mô tả :</h4>
@@ -65,11 +73,13 @@
                     <h4 scope="col">Trạng thái :</h4>
                     <p>{{$house->status}}</p>
                     <h4 scope="col">Ảnh :</h4>
-                    <p><img src="{{asset('storage/' . $house->image)}}" style="height:200px; width:200px"></p>
+                    <p><img src="{{asset('storage/' . $house->image)}}" style="height:200px; width:200px">
+                        <img src="{{asset('storage/' . $house->image1)}}" style="height:200px; width:200px">
+                        <img src="{{asset('storage/' . $house->image2)}}" style="height:200px; width:200px"></p>
 
                 </div>
             </div>
-            <div>
+            <div style="margin-bottom: 50px ">
                 <a class="btn btn-dark" href="{{ route('house.index') }}">Quay lại</a>
             </div>
         </div>

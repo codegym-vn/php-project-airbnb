@@ -20,7 +20,8 @@
                     </div>
                     <div class="form-group">
                         <label>Mô tả</label>
-                        <textarea name="description" class="form-control" id="description">{{$house->description}}</textarea>
+                        <textarea name="description" class="form-control"
+                                  id="description">{{$house->description}}</textarea>
                         <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
                         <script>
                             CKEDITOR.replace('description');
@@ -42,7 +43,7 @@
                     </div>
                     <div class="form-group">
                         <label>Giá phòng</label>
-                        <input type="text" name="price" value="{{$house->price}}"class="form-control"/>
+                        <input type="text" name="price" value="{{$house->price}}" class="form-control"/>
                         @if($errors->has('price'))
                             <p class="help is-danger" style="color: red;">{{ $errors->first('price') }}</p>
                         @endif
@@ -77,9 +78,22 @@
                     <div class="form-group">
                         <label>Ảnh</label><br>
                         <img src="{{asset('storage/' . $house->image)}}" style="height:50px; width:50px">
-                        <input type="file" name="image" value="{{asset('storage/' . $house->image)}}" class="form-control-file"/>
+                        <img src="{{asset('storage/' . $house->image1)}}" style="height:50px; width:50px">
+                        <img src="{{asset('storage/' . $house->image2)}}" style="height:50px; width:50px">
+                        <input type="file" name="image" value="{{asset('storage/' . $house->image)}}"
+                               class="form-control-file"/>
                         @if($errors->has('image'))
                             <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
+                        @endif
+                        <input type="file" name="image1" value="{{asset('storage/' . $house->image1)}}"
+                               class="form-control-file"/>
+                        @if($errors->has('image1'))
+                            <p class="help is-danger" style="color: red;">{{ $errors->first('image1') }}</p>
+                        @endif
+                        <input type="file" name="image2" value="{{asset('storage/' . $house->image2)}}"
+                               class="form-control-file"/>
+                        @if($errors->has('image2'))
+                            <p class="help is-danger" style="color: red;">{{ $errors->first('image2') }}</p>
                         @endif
                     </div>
                     <button type="submit" class="btn btn-primary">Cập nhật</button>

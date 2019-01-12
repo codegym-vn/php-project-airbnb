@@ -6,6 +6,22 @@
             <div class="row">
                 <div class="col-12"><h1 style="text-align: center">My House</h1></div>
                 <div class="col-6">
+                    <div class="col-12">
+                        @if (Session::has('success'))
+                            <p class="text-success">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                {{ Session::get('success') }}
+                            </p>
+                        @endif
+                    </div>
+                    <div class="col-12">
+                        @if (Session::has('delete'))
+                            <p class="text-danger">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                {{ Session::get('delete') }}
+                            </p>
+                        @endif
+                    </div>
                     <form class="navbar-form navbar-right" action="{{ route('house.search') }}" method="get">
                         @csrf
                         <div class="row">
@@ -42,7 +58,8 @@
                                 <td><a href="{{ route('house.show', $house->id) }}">{{$house->title}}</a></td>
                                 <td>{{$house->price . 'đ'}}</td>
                                 <td>{{$house->status}}</td>
-                                <td><img src="http://127.0.0.1:8000/storage/{{$house->image}}" style="height:200px; width:200px">
+                                <td><img src="http://127.0.0.1:8000/storage/{{$house->image}}"
+                                         style="height:200px; width:200px">
                                 </td>
                             </tr>
                         @endforeach
@@ -52,7 +69,7 @@
                     </div>
                 </table>
             </div>
-            <div class="pagination float-lg-right">
+            <div class="pagination float-lg-right" style="margin-bottom: 30px">
                 {{ $houses->links() }}
             </div>
         </div>

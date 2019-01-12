@@ -22,6 +22,8 @@ class CreateHousesTable extends Migration
             $table->string('address');
             $table->string('status');
             $table->text('image');
+            $table->text('image1');
+            $table->text('image2');
             $table->timestamps();
         });
     }

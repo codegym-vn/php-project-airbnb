@@ -28,6 +28,8 @@ class houseSeeder extends Seeder
         $house->address = 'Hoàng Quốc Việt - Hạ Long Bay';
         $house->status = 'Chưa cho thuê';
         $house->image = '';
+        $house->image1 = '';
+        $house->image2 = '';
         $house->user_id = 1;
         $house->save();
 
@@ -48,6 +50,8 @@ class houseSeeder extends Seeder
         $house->address = 'Sóc Sơn - Hà Nội';
         $house->status = 'Đã cho thuê';
         $house->image = '';
+        $house->image1 = '';
+        $house->image2 = '';
         $house->user_id = 1;
         $house->save();
 
@@ -67,6 +71,8 @@ class houseSeeder extends Seeder
         $house->address = '23 - Full City - Vũng Tàu';
         $house->status = 'Chưa cho thuê';
         $house->image = '';
+        $house->image1 = '';
+        $house->image2 = '';
         $house->user_id = 1;
         $house->save();
 
@@ -85,6 +91,8 @@ class houseSeeder extends Seeder
         $house->address = '15 - Vintage Wooden House - Đà Lạt';
         $house->status = 'Đã cho thuê';
         $house->image = '';
+        $house->image1 = '';
+        $house->image2 = '';
         $house->user_id = 1;
         $house->save();
 
@@ -104,6 +112,8 @@ class houseSeeder extends Seeder
         $house->address = '45 - Phan Bội Châu - Đà Lạt';
         $house->status = 'Chưa cho thuê';
         $house->image = '';
+        $house->image1 = '';
+        $house->image2 = '';
         $house->user_id = 1;
         $house->save();
 
@@ -124,6 +134,8 @@ class houseSeeder extends Seeder
         $house->address = '254 - Hai Bà Trưng - Đà Lạt';
         $house->status = 'Chưa cho thuê';
         $house->image = '';
+        $house->image1 = '';
+        $house->image2 = '';
         $house->user_id = 1;
         $house->save();
 
@@ -146,6 +158,8 @@ class houseSeeder extends Seeder
         $house->address = 'Núi Bà Nà - Đà Nẵng';
         $house->status = 'Chưa cho thuê';
         $house->image = '';
+        $house->image1 = '';
+        $house->image2 = '';
         $house->user_id = 1;
         $house->save();
 
@@ -168,6 +182,8 @@ class houseSeeder extends Seeder
         $house->address = '5B - Room B - Hùng Vương - Đà Lạt';
         $house->status = 'Đã cho thuê';
         $house->image = '';
+        $house->image1 = '';
+        $house->image2 = '';
         $house->user_id = 1;
         $house->save();
     }
