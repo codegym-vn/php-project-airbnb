@@ -18,7 +18,7 @@ class customerController extends Controller
         return House::find($id);
     }
 
-    public function order(Request $request, $id)
+    public function order(Request $request)
     {
         $customer = new User();
         $customer->name = $request->name;
