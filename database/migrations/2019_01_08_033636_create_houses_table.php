@@ -21,9 +21,9 @@ class CreateHousesTable extends Migration
             $table->integer('price');
             $table->string('address');
             $table->string('status');
-            $table->text('image');
-            $table->text('image1');
-            $table->text('image2');
+            $table->string('image');
+            $table->string('image1');
+            $table->string('image2');
             $table->timestamps();
         });
     }

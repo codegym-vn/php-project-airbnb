@@ -29,10 +29,10 @@ class HouseRequest extends FormRequest
             'content' => 'required|min:5',
             'price' => 'required|numeric',
             'address' => 'required|min:5',
-            'status' => 'required|min:5',
-            'image' => 'required|min:2',
-            'image1' => 'required|min:2',
-            'image2' => 'required|min:2',
+            'status' => 'required',
+            'image' => 'required',
+            'image1' => 'required',
+            'image2' => 'required',
 
         ];
     }

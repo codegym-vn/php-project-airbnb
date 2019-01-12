@@ -103,15 +103,15 @@ class houseController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(HouseRequest $request, $id)
+    public function update(Request $request, HouseRequest $houseRequest, $id)
     {
         $house = House::findOrFail($id);
-        $house->title = $request->input('title');
-        $house->description = $request->input('description');
-        $house->content = $request->input('content');
-        $house->price = $request->input('price');
-        $house->address = $request->input('address');
-        $house->status = $request->input('status');
+        $house->title = $houseRequest->input('title');
+        $house->description = $houseRequest->input('description');
+        $house->content = $houseRequest->input('content');
+        $house->price = $houseRequest->input('price');
+        $house->address = $houseRequest->input('address');
+        $house->status = $houseRequest->input('status');
         if ($request->hasFile('image')) {
 
             $currentImg = $house->image;
@@ -170,7 +170,7 @@ class houseController extends Controller
         $house->delete();
 
         Session::flash('delete', 'Bạn đã xóa thành công!');
-        return redirect(view('house.index'));
+        return redirect(route('house.index'));
     }
 
     public function search(Request $request)
