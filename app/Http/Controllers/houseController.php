@@ -56,9 +56,19 @@ class houseController extends Controller
             $path = $image->store('images', 'public');
             $house->image = $path;
         }
+        if ($request->hasFile('image')) {
+            $image1 = $request->image1;
+            $path = $image1->store('images', 'public');
+            $house->image1 = $path;
+        }
+        if ($request->hasFile('image')) {
+            $image2 = $request->image2;
+            $path = $image2->store('images', 'public');
+            $house->image2 = $path;
+        }
         $house->save();
 
-        Session::flash('success', 'Tao moi thanh cong');
+        Session::flash('success', 'Tạo mới thành công!');
         return redirect(route('house.index'));
     }
 
@@ -114,10 +124,34 @@ class houseController extends Controller
             $house->image = $path;
 
         }
+        if ($request->hasFile('image1')) {
+
+            $currentImg = $house->image1;
+            if ($currentImg) {
+                Storage::delete('/public/' . $currentImg);
+            }
+
+            $image1 = $request->image1;
+            $path = $image1->store('images', 'public');
+            $house->image1 = $path;
+
+        }
+        if ($request->hasFile('image2')) {
+
+            $currentImg = $house->image2;
+            if ($currentImg) {
+                Storage::delete('/public/' . $currentImg);
+            }
+
+            $image2 = $request->image2;
+            $path = $image2->store('images', 'public');
+            $house->image2 = $path;
+
+        }
         $house->save();
 
-        Session::flash('success', 'Cap nhat thanh cong');
-        return redirect(route('house.index'));
+        Session::flash('success', 'Cập nhập thành công');
+        return redirect(route('house.show', $house->id));
     }
 
     /**
@@ -135,7 +169,8 @@ class houseController extends Controller
         }
         $house->delete();
 
-        return redirect(route('house.index'));
+        Session::flash('delete', 'Bạn đã xóa thành công!');
+        return redirect(view('house.index'));
     }
 
     public function search(Request $request)
@@ -144,7 +179,7 @@ class houseController extends Controller
         if (!$keyword) {
             return redirect()->route('house.index');
         }
-        $houses = House::where('title', 'LIKE', '%' . $keyword. '%')->paginate(3);
+        $houses = House::where('title', 'LIKE', '%' . $keyword . '%')->paginate(3);
 
         return view('house.list', compact('houses'));
     }

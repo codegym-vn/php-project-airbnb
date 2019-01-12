@@ -62,6 +62,14 @@
                             @if($errors->has('image'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
                             @endif
+                            <input type="file" name="image1" class="form-control-file">
+                            @if($errors->has('image1'))
+                                <p class="help is-danger" style="color: red;">{{ $errors->first('image1') }}</p>
+                            @endif
+                            <input type="file" name="image2" class="form-control-file">
+                            @if($errors->has('image2'))
+                                <p class="help is-danger" style="color: red;">{{ $errors->first('image2') }}</p>
+                            @endif
                         </div>
                         <button type="submit" class="btn btn-primary">Thêm mới</button>
                         <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Quay lại
