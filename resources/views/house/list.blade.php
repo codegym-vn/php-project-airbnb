@@ -109,7 +109,7 @@
                     </div>
                 </table>
             </div>
-            <div class="pagination float-lg-right">
+            <div class="pagination float-lg-right" style="margin-bottom: 30px">
                 {{ $houses->links() }}
             </div>
         </div>

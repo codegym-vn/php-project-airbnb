@@ -71,9 +71,11 @@
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image2') }}</p>
                             @endif
                         </div>
-                        <button type="submit" class="btn btn-primary">Thêm mới</button>
-                        <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Quay lại
-                        </button>
+                        <div style="margin-bottom: 50px">
+                            <button type="submit" class="btn btn-primary">Thêm mới</button>
+                            <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Quay lại
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
