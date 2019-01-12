@@ -103,7 +103,7 @@ class houseController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id, HouseRequest $houseRequest)
+    public function update(Request $request, HouseRequest $houseRequest, $id)
     {
         $house = House::findOrFail($id);
         $house->title = $houseRequest->input('title');
