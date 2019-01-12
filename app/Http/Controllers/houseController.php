@@ -170,7 +170,7 @@ class houseController extends Controller
         $house->delete();
 
         Session::flash('delete', 'Bạn đã xóa thành công!');
-        return redirect(view('house.index'));
+        return redirect(route('house.index'));
     }
 
     public function search(Request $request)
