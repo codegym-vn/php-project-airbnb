@@ -58,15 +58,16 @@
                         </div>
                         <div class="form-group">
                             <label>Ảnh</label>
-                            <input type="file" name="image" class="form-control-file">
+                            <div class="file-loading">
+                            <input type="file" name="image"  multiple class="file"></div>
                             @if($errors->has('image'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
                             @endif
-                            <input type="file" name="image1" class="form-control-file">
+                            <input type="file" name="image1" class="file">
                             @if($errors->has('image1'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image1') }}</p>
                             @endif
-                            <input type="file" name="image2" class="form-control-file">
+                            <input type="file" name="image2" class="file">
                             @if($errors->has('image2'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image2') }}</p>
                             @endif
