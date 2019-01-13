@@ -58,7 +58,9 @@
                         </div>
                         <div class="form-group">
                             <label>Ảnh</label>
-                            <input type="file" name="image" class="form-control-file">
+                            <div class="file-loading">
+                            <input type="file" name="image"  multiple class="file"
+                                   data-overwrite-initial="false" data-min-file-count="2"></div>
                             @if($errors->has('image'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
                             @endif

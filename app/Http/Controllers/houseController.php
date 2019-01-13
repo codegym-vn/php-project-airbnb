@@ -42,7 +42,7 @@ class houseController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(HouseRequest $request)
+    public function store(Request $request)
     {
         $house = new House();
         $house->title = $request->input('title');
@@ -56,12 +56,12 @@ class houseController extends Controller
             $path = $image->store('images', 'public');
             $house->image = $path;
         }
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('image1')) {
             $image1 = $request->image1;
             $path = $image1->store('images', 'public');
             $house->image1 = $path;
         }
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('image2')) {
             $image2 = $request->image2;
             $path = $image2->store('images', 'public');
             $house->image2 = $path;
