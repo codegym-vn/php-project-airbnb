@@ -67,7 +67,7 @@
                     <h4 scope="col">Nội dung :</h4>
                     <p>{!! $house->content !!}</p>
                     <h4 scope="col">Giá phòng :</h4>
-                    <p>{{$house->price}}</p>
+                    <p>{{number_format($house->price) . ' VND'}}</p>
                     <h4 scope="col">Địa chỉ :</h4>
                     <p>{{$house->address}}</p>
                     <h4 scope="col">Trạng thái :</h4>
