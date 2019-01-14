@@ -63,9 +63,9 @@
                     <h4 scope="col">Tên nhà :</h4>
                     <p>{{$house->title}}</p>
                     <h4 scope="col">Số lượng phòng ngủ :</h4>
-                    <p>{{$house->quantityOfBedroom}}</p>
+                    <p>{{$house->quantityOfBedroom  . ' ' . 'phòng'}}</p>
                     <h4 scope="col">Số lượng phòng tắm :</h4>
-                    <p>{{$house->quantityOfBathroom}}</p>
+                    <p>{{$house->quantityOfBathroom . ' ' . 'phòng'}}</p>
                     <h4 scope="col">Giá phòng :</h4>
                     <p>{{number_format($house->price) . ' VND' . ' ' .'/ đêm'}}</p>
                     <h4 scope="col">Địa chỉ :</h4>

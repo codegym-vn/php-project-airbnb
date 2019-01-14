@@ -25,8 +25,8 @@ class HouseRequest extends FormRequest
     {
         return [
             'title' => 'required|min:5',
-            'quantityOfBedroom' => 'required|numeric',
-            'quantityOfBathroom' => 'required|numeric',
+            'quantityOfBedroom' => 'required',
+            'quantityOfBathroom' => 'required',
             'price' => 'required|numeric',
             'address' => 'required|min:5',
             'status' => 'required',

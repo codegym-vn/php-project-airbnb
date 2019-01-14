@@ -11,7 +11,7 @@
                     @csrf
                     <input type="hidden" name="id" value="{{$house->id}}"/>
                     <div class="form-group">
-                        <label>Tiêu đề</label>
+                        <label>Tên nhà</label>
                         <input type="text" name="title" value="{{$house->title}}"
                                class="form-control"/>
                         @if($errors->has('title'))
@@ -20,16 +20,30 @@
                     </div>
                     <div class="form-group">
                         <label>Số lượng phòng ngủ</label>
-                        <input type="number" name="quantityOfBedroom" value="{{$house->quantityOfBedroom}}"
-                               class="form-control"/>
+                        <div class="input-group mb-3">
+                            <select class="custom-select" id="inputGroupSelect02" name="quantityOfBedroom" autofocus="1">
+                                <option selected>Chọn số phòng ngủ</option>
+                                <option id value="1">1 phòng</option>
+                                <option value="2">2 phòng</option>
+                                <option value="3">3 phòng</option>
+                                <option value="3">4 phòng</option>
+                            </select>
+                        </div>
                         @if($errors->has('quantityOfBedroom'))
                             <p class="help is-danger" style="color: red;">{{ $errors->first('quantityOfBedroom') }}</p>
                         @endif
                     </div>
                     <div class="form-group">
                         <label>Số lượng phòng tắm</label>
-                        <input type="number" name="quantityOfBathroom" value="{{$house->quantityOfBathroom}}"
-                               class="form-control"/>
+                        <div class="input-group mb-3">
+                            <select class="custom-select" id="inputGroupSelect02" name="quantityOfBathroom" placeholder="{{$house->quantityOfBathroom}}">
+                                <option selected>Chọn số phòng tắm</option>
+                                <option value="1">1 phòng</option>
+                                <option value="2">2 phòng</option>
+                                <option value="3">3 phòng</option>
+                                <option value="3">4 phòng</option>
+                            </select>
+                        </div>
                         @if($errors->has('quantityOfBathroom'))
                             <p class="help is-danger" style="color: red;">{{ $errors->first('quantityOfBathroom') }}</p>
                         @endif

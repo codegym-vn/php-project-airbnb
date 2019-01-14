@@ -11,7 +11,7 @@
                     <form method="post" action="{{route('house.store')}}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label>Tiêu đề</label>
+                            <label>Tên nhà</label>
                             <input type="text" name="title" class="form-control"/>
                             @if($errors->has('title'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('title') }}</p>
@@ -19,7 +19,15 @@
                         </div>
                         <div class="form-group">
                             <label>Số lượng phòng ngủ</label>
-                            <input type="number" name="quantityOfBedroom" class="form-control"/>
+                            <div class="input-group mb-3">
+                                <select class="custom-select" id="inputGroupSelect02" name="quantityOfBedroom">
+                                    <option selected>Chọn số phòng ngủ</option>
+                                    <option value="1">1 phòng</option>
+                                    <option value="2">2 phòng</option>
+                                    <option value="3">3 phòng</option>
+                                    <option value="3">4 phòng</option>
+                                </select>
+                            </div>
                             @if($errors->has('quantityOfBedroom'))
                                 <p class="help is-danger"
                                    style="color: red;">{{ $errors->first('quantityOfBedroom') }}</p>
@@ -27,7 +35,15 @@
                         </div>
                         <div class="form-group">
                             <label>Số lượng phòng tắm</label>
-                            <input type="number" name="quantityOfBathroom" class="form-control"/>
+                            <div class="input-group mb-3">
+                                <select class="custom-select" id="inputGroupSelect02" name="quantityOfBathroom">
+                                    <option selected>Chọn số phòng tắm</option>
+                                    <option value="1">1 phòng</option>
+                                    <option value="2">2 phòng</option>
+                                    <option value="3">3 phòng</option>
+                                    <option value="3">4 phòng</option>
+                                </select>
+                            </div>
                             @if($errors->has('quantityOfBathroom'))
                                 <p class="help is-danger"
                                    style="color: red;">{{ $errors->first('quantityOfBathroom') }}</p>
@@ -36,7 +52,8 @@
                         <div class="form-group">
                             <label>Giá tiền</label>
                             <div class="input-group">
-                                <input type="text" name="price" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                                <input type="text" name="price" class="form-control"
+                                       aria-label="Dollar amount (with dot and two decimal places)">
                                 <div class="input-group-append">
                                     <span class="input-group-text">VND</span>
                                     <span class="input-group-text">1 ngày/đêm</span>

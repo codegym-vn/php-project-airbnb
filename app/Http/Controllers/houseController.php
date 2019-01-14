@@ -22,7 +22,7 @@ class houseController extends Controller
      */
     public function index()
     {
-        $houses = House::paginate(3);
+        $houses = House::orderBy('created_at', 'desc')->paginate(3);
         return view('house.list', compact('houses'));
     }
 
