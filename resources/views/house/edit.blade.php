@@ -79,8 +79,7 @@
                         <label>Ảnh</label><br>
 
                         <img src="{{asset('storage/' . $house->image)}}" style="height:50px; width:50px">
-                        <img src="{{asset('storage/' . $house->image1)}}" style="height:50px; width:50px">
-                        <img src="{{asset('storage/' . $house->image2)}}" style="height:50px; width:50px">
+
                         <div class="file-loading">
                             <input type="file" name="image" value="{{$house->image}}"
                                    class="file" multiple/>

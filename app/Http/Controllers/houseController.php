@@ -22,7 +22,7 @@ class houseController extends Controller
      */
     public function index()
     {
-        $houses = House::paginate(3);
+        $houses = House::orderBy('created_at', 'desc')->paginate(3);
         return view('house.list', compact('houses', 'firstImage'));
     }
 
@@ -75,7 +75,7 @@ class houseController extends Controller
 //            $house->image2 = $path;
 //        }
         $house->save();
-        dd($house->image[0]);
+//        dd($house->image[0]);
 
         Session::flash('success', 'Tạo mới thành công!');
         return redirect(route('house.index'));
@@ -133,30 +133,30 @@ class houseController extends Controller
             $house->image = $path;
 
         }
-        if ($request->hasFile('image1')) {
-
-            $currentImg = $house->image1;
-            if ($currentImg) {
-                Storage::delete('/public/' . $currentImg);
-            }
-
-            $image1 = $request->image1;
-            $path = $image1->store('images', 'public');
-            $house->image1 = $path;
-
-        }
-        if ($request->hasFile('image2')) {
-
-            $currentImg = $house->image2;
-            if ($currentImg) {
-                Storage::delete('/public/' . $currentImg);
-            }
-
-            $image2 = $request->image2;
-            $path = $image2->store('images', 'public');
-            $house->image2 = $path;
-
-        }
+//        if ($request->hasFile('image1')) {
+//
+//            $currentImg = $house->image1;
+//            if ($currentImg) {
+//                Storage::delete('/public/' . $currentImg);
+//            }
+//
+//            $image1 = $request->image1;
+//            $path = $image1->store('images', 'public');
+//            $house->image1 = $path;
+//
+//        }
+//        if ($request->hasFile('image2')) {
+//
+//            $currentImg = $house->image2;
+//            if ($currentImg) {
+//                Storage::delete('/public/' . $currentImg);
+//            }
+//
+//            $image2 = $request->image2;
+//            $path = $image2->store('images', 'public');
+//            $house->image2 = $path;
+//
+//        }
         $house->save();
 
         Session::flash('success', 'Cập nhập thành công');
