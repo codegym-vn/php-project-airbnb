@@ -21,9 +21,9 @@
                     <div class="form-group">
                         <label>Số lượng phòng ngủ</label>
                         <div class="input-group mb-3">
-                            <select class="custom-select" id="inputGroupSelect02" name="quantityOfBedroom" autofocus="1">
+                            <select class="custom-select" id="inputGroupSelect02" name="quantityOfBedroom" autofocus>
                                 <option selected>Chọn số phòng ngủ</option>
-                                <option id value="1">1 phòng</option>
+                                <option value="1">1 phòng</option>
                                 <option value="2">2 phòng</option>
                                 <option value="3">3 phòng</option>
                                 <option value="3">4 phòng</option>
@@ -36,7 +36,7 @@
                     <div class="form-group">
                         <label>Số lượng phòng tắm</label>
                         <div class="input-group mb-3">
-                            <select class="custom-select" id="inputGroupSelect02" name="quantityOfBathroom" placeholder="{{$house->quantityOfBathroom}}">
+                            <select class="custom-select" id="inputGroupSelect02" name="quantityOfBathroom" autofocus >
                                 <option selected>Chọn số phòng tắm</option>
                                 <option value="1">1 phòng</option>
                                 <option value="2">2 phòng</option>
