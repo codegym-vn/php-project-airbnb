@@ -118,6 +118,30 @@ class houseSeeder extends Seeder
         $house->save();
 
         $house = new House();
+        $house->title = 'Sunrise House Hà Nội';
+        $house->description = '02 phòng ngủ lớn,
+                               02 phòng ngủ nhỏ,
+                               01 phòng khách,
+                               02 phòng tắm,
+                               01 phòng bếp đầy đủ tiện nghi,
+                               Nằm ngay trung tâm thành phố Hà Nội, 
+                               Thuận tiện cho việc tham quan đi lại';
+        $house->content = 'Nhà Sunrise nằm ngay tại trung tâm của Hà Nội.
+                           Chỉ 10 phút đi bộ đến hồ Hoàn Kiếm và 5 phút đi đến khu phố cổ. 
+                           Căn hộ này được thiết kế ấm cúng khiến cho du khách cảm thấy thỏa mái như ở nhà của mình. 
+                           Căn hộ có đầy đủ tiện nghi với các trang thiết bị hiện đại :  TV thông minh,
+                           Wi-Fi tốc độ cao trong phòng...
+                           Mức độ ồn: thấp (khu dân cư yên tĩnh)';
+        $house->price = '1700000';
+        $house->address = '16B Thợ Nhuộm, Hoàn Kiếm, Hà Nội';
+        $house->status = 'Chưa cho thuê';
+        $house->image = '';
+        $house->image1 = '';
+        $house->image2 = '';
+        $house->user_id = 1;
+        $house->save();
+
+        $house = new House();
         $house->title = 'Connect Homestay - Đà Lạt';
         $house->description = '01 phòng ngủ lớn 2 giường,
                                01 phòng ngủ nhỏ,
@@ -186,5 +210,73 @@ class houseSeeder extends Seeder
         $house->image2 = '';
         $house->user_id = 1;
         $house->save();
+
+        $house = new House();
+        $house->title = 'TRULY Antique Hà Nội';
+        $house->description = '01 phòng ngủ lớn,
+                               02 phòng ngủ nhỏ,
+                               01 phòng khách,
+                               01 phòng bếp đầy đủ tiện nghi,
+                               Đây là một nơi tuyệt vời để ở lại nếu bạn muốn ghé thăm tất cả các điểm tham quan tốt nhất tại Hà Nội.';
+        $house->content = 'Căn hộ được trang trí đẹp mắt với rất nhiều đồ gốm do các nghệ nhân Việt Nam làm nên căn hộ mang phong cách độc đáo. 
+                           Điểm nổi bật là kiến ​​trúc và thiết kế của nhà Đông Dương khiến cho bạn có những kỷ niệm khó quên ở Hà Nội. 
+                           Bản thân ngôi nhà được sở hữu và thiết kế bởi một kiến ​​trúc sư tài năng nên mọi thứ đều được suy nghĩ kỹ lưỡng.
+                           Siêu kinh nghiệm sống như một người Hà Nội thực sự trong một con hẻm ngay tại trung tâm thành phố. 
+                           Bạn cũng có cơ hội khám phá cuộc sống hàng ngày của người dân địa phương trong hẻm với một số cửa hàng thực phẩm địa phương, 
+                           đó là một trải nghiệm thú vị cho bất kỳ người nước ngoài nào.';
+        $house->price = '1800000';
+        $house->address = '11 Trần Hưng Đạo, Cửa Nam, Hoàn Kiếm, Hà Nội';
+        $house->status = 'Đã cho thuê';
+        $house->image = '';
+        $house->image1 = '';
+        $house->image2 = '';
+        $house->user_id = 1;
+        $house->save();
+
+        $house = new House();
+        $house->title = 'Vy House Nha Trang';
+        $house->description = 'Ngôi nhà 3 tầng gồm có 04 phòng ngủ, 
+                               3 phòng tắm, phòng khách có trang bị bàn bi lắc, trò chơi phi tiêu, 
+                               không gian bếp được trang trí đẹp mắt trên sân thượng ...,
+                               Đặc biệt có đầy đủ tiện nghi : internet, tv, bếp nấu, bếp BBQ ngoài trời, trang thiết bị bếp máy lạnh,máy giặt, bàn là, tủ lạnh, vv..';
+        $house->content = 'Nằm gần ngay trung tâm xung quanh là chợ, siêu thị, khu du lịch nổi tiếng của Nha Trang như Tháp Bà Ponaga 5 phút, 
+                           Hòn Chồng 5 phút, Iresort 10 phút.
+                           Xung quanh khách sạn là những địa điểm ăn uống nổi tiếng.
+                           Có cho thuê xe máy cho những du khách muốn tham quan thành phố
+                           Lễ tân luôn sẵn sàng giới thiệu cho các bạn những địa điểm ăn uống không thể bỏ qua
+                           Hệ thống camera đảm bảo sự an toàn cho các bạn tuyệt đối
+                           Có chỗ đậu xe hơi rộng rãi và an toàn
+                           Với thiết kế tông màu trầm ấm tạo cảm giác cho căn phòng luôn ấm áp
+                           Đặc biệt vào ban đêm, ngay từ sân thượng các bạn có thể thưởng thức nét đẹp nha trang về đêm 
+                           và tổ chức bbq sân thượng cùng gia đình và bạn bè.';
+        $house->price = '1500000';
+        $house->address = '100 Bắc Sơn, Nha Trang, Khánh Hòa';
+        $house->status = 'Chưa cho thuê';
+        $house->image = '';
+        $house->image1 = '';
+        $house->image2 = '';
+        $house->user_id = 1;
+        $house->save();
+
+        $house = new House();
+        $house->title = 'Mountain View Homestay - Kingbed room - Sơn La';
+        $house->description = '5 căn Bungalow khép kín, 1 nhà sàn 2 tầng và 2 phòng ngủ tập thể , 
+                               mỗi phòng ngủ tập thể có thể ngủ được 15 người 
+                               và tất cả các phòng có hướng nhìn ra núi và khu phố , 
+                               bởi vì homestay có vị trí rất cao trên núi.';
+        $house->content = 'Mountain View Homestay nằm trên lưng chừng núi cách trung tâm mộc châu 1,2km 
+                           và nó nằm ngay ngã ba Pa Háng đường đi cửa khẩu lóong sập và thác giải yếm, khu du lịch happy land...
+                           Mountain View Homestay có một trí rất đẹp có thể ngắm nhìn được toàn cảnh núi non hùng vĩ cũng như các khu dân cư lân cận, 
+                           không những thế nằm trên một vị trí lý tưởng cùng với sự yên tĩnh 
+                           nơi đây Mountain View Homestay hứa hẹn sẽ là nơi lý tưởng để quý khách thư giãn sau 1 ngày vất vả khám phá mộc châu.';
+        $house->price = '1900000';
+        $house->address = 'Mountain View Homestay, khu 12, tt. Mộc Châu, Mộc Châu, Sơn La';
+        $house->status = 'Chưa cho thuê';
+        $house->image = '';
+        $house->image1 = '';
+        $house->image2 = '';
+        $house->user_id = 1;
+        $house->save();
+
     }
 }
