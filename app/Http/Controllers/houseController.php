@@ -22,7 +22,7 @@ class houseController extends Controller
      */
     public function index()
     {
-        $houses = House::paginate(3);
+        $houses = House::orderBy('created_at', 'desc')->paginate(3);
         return view('house.list', compact('houses'));
     }
 
@@ -46,11 +46,12 @@ class houseController extends Controller
     {
         $house = new House();
         $house->title = $request->input('title');
-        $house->description = $request->input('description');
-        $house->content = $request->input('content');
+        $house->quantityOfBedroom = $request->input('quantityOfBedroom');
+        $house->quantityOfBathroom = $request->input('quantityOfBathroom');
         $house->price = $request->input('price');
         $house->address = $request->input('address');
         $house->status = $request->input('status');
+        $house->description = $request->input('description');
         if ($request->hasFile('image')) {
             $image = $request->image;
             $path = $image->store('images', 'public');
@@ -107,11 +108,12 @@ class houseController extends Controller
     {
         $house = House::findOrFail($id);
         $house->title = $houseRequest->input('title');
+        $house->quantityOfBedroom = $request->input('quantityOfBedroom');
+        $house->quantityOfBathroom = $request->input('quantityOfBathroom');
+        $house->price = $request->input('price');
+        $house->address = $request->input('address');
+        $house->status = $request->input('status');
         $house->description = $houseRequest->input('description');
-        $house->content = $houseRequest->input('content');
-        $house->price = $houseRequest->input('price');
-        $house->address = $houseRequest->input('address');
-        $house->status = $houseRequest->input('status');
         if ($request->hasFile('image')) {
 
             $currentImg = $house->image;

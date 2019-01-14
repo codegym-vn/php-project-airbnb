@@ -40,7 +40,6 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Tiêu đề</th>
                         <th scope="col">Giá phòng</th>
                         <th scope="col">Trạng thái</th>
@@ -54,7 +53,6 @@
                     @else
                         @foreach($houses as $key => $house)
                             <tr>
-                                <th scope="row"{{++$key}}></th>
                                 <td><a href="{{ route('house.show', $house->id) }}">{{$house->title}}</a></td>
                                 <td>{{number_format($house->price). ' VND'}}</td>
                                 <td>{{$house->status}}</td>

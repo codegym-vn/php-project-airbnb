@@ -16,11 +16,12 @@ class CreateHousesTable extends Migration
         Schema::create('houses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->text('description');
-            $table->text('content');
+            $table->string('quantityOfBedroom');
+            $table->string('quantityOfBathroom');
             $table->integer('price');
             $table->string('address');
             $table->string('status');
+            $table->text('description');
             $table->string('image');
             $table->string('image1');
             $table->string('image2');

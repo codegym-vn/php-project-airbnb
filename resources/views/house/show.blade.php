@@ -60,18 +60,20 @@
                             </p>
                         @endif
                     </div>
-                    <h4 scope="col">Tiêu đề :</h4>
+                    <h4 scope="col">Tên nhà :</h4>
                     <p>{{$house->title}}</p>
-                    <h4 scope="col">Mô tả :</h4>
-                    <p>{!! $house->description !!}</p>
-                    <h4 scope="col">Nội dung :</h4>
-                    <p>{!! $house->content !!}</p>
+                    <h4 scope="col">Số lượng phòng ngủ :</h4>
+                    <p>{{$house->quantityOfBedroom  . ' ' . 'phòng'}}</p>
+                    <h4 scope="col">Số lượng phòng tắm :</h4>
+                    <p>{{$house->quantityOfBathroom . ' ' . 'phòng'}}</p>
                     <h4 scope="col">Giá phòng :</h4>
-                    <p>{{number_format($house->price) . ' VND'}}</p>
+                    <p>{{number_format($house->price) . ' VND' . ' ' .'/ đêm'}}</p>
                     <h4 scope="col">Địa chỉ :</h4>
                     <p>{{$house->address}}</p>
                     <h4 scope="col">Trạng thái :</h4>
                     <p>{{$house->status}}</p>
+                    <h4 scope="col">Mô tả :</h4>
+                    <p>{!! $house->description !!}</p>
                     <h4 scope="col">Ảnh :</h4>
                     <p><img src="{{asset('storage/' . $house->image)}}" style="height:200px; width:200px">
                         <img src="{{asset('storage/' . $house->image1)}}" style="height:200px; width:200px">
