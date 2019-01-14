@@ -103,25 +103,19 @@
                     <div class="form-group">
                         <label>Ảnh</label><br>
 
-                        <img src="{{asset('storage/' . $house->image)}}" style="height:50px; width:50px">
-                        <img src="{{asset('storage/' . $house->image1)}}" style="height:50px; width:50px">
-                        <img src="{{asset('storage/' . $house->image2)}}" style="height:50px; width:50px">
+                        @if($house->image)
+                            @foreach($house->image as $image)
+                                <img src="{{asset('storage/' . $image)}}" style="height:50px; width:50px">
+                            @endforeach
+                        @else
+                            {{'Chưa có ảnh'}}
+                        @endif
                         <div class="file-loading">
-                            <input type="file" name="image" value="{{$house->image}}"
+                            <input type="file" name="images[]"
                                    class="file" multiple/>
                         </div>
                         @if($errors->has('image'))
                             <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
-                        @endif
-                        <input type="file" name="image1" value="{{$house->image1}}"
-                               class="file"/>
-                        @if($errors->has('image1'))
-                            <p class="help is-danger" style="color: red;">{{ $errors->first('image1') }}</p>
-                        @endif
-                        <input type="file" name="image2" value="{{$house->image2}}"
-                               class="file"/>
-                        @if($errors->has('image2'))
-                            <p class="help is-danger" style="color: red;">{{ $errors->first('image2') }}</p>
                         @endif
                     </div>
                     <button type="submit" class="btn btn-primary">Cập nhật</button>

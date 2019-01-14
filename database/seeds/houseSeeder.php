@@ -25,8 +25,7 @@ class houseSeeder extends Seeder
                            Bạn có thể đón mặt trời mọc và lặn khi tận hưởng những cốc cà phê bên gia đình và bạn bè. 
                            Bạn khó có thể tìm được một căn hộ nào ở Hạ Long với hướng nhìn đẹp và thiết kế hiện đại như căn Rose house.';
         $house->image = '';
-        $house->image1 = '';
-        $house->image2 = '';
+
         $house->user_id = 1;
         $house->save();
 
@@ -43,8 +42,7 @@ class houseSeeder extends Seeder
                            Nơi đây cung cấp cho bạn một không gian sống xanh và có nhận đặt bàn tiệc cho gia đình
                            Nơi đây như một tòa lâu đài nhỏ nhắn ẩn mình giữa cỏ cây hoa lá, có cả một sân vườn đầy hoa trái và những bãi cỏ xanh mướt trải dài.';
         $house->image = '';
-        $house->image1 = '';
-        $house->image2 = '';
+
         $house->user_id = 1;
         $house->save();
 
@@ -61,8 +59,7 @@ class houseSeeder extends Seeder
                            Căn hộ có sân hiên.
                            Mũi Nghinh Phong cách Bi Home 1,9 km. Sân bay Quốc tế Tân Sơn Nhất cách đó 72 km.';
         $house->image = '';
-        $house->image1 = '';
-        $house->image2 = '';
+
         $house->user_id = 1;
         $house->save();
 
@@ -78,8 +75,7 @@ class houseSeeder extends Seeder
                             Bạn có thể tổ chức những bữa tiệc nước nướng BBQ ngoài trời
                             Các căn phòng đều có cửa sổ để bạn có thể gần hơn với thiên nhiên';
         $house->image = '';
-        $house->image1 = '';
-        $house->image2 = '';
+
         $house->user_id = 1;
         $house->save();
 
@@ -97,8 +93,7 @@ class houseSeeder extends Seeder
                            Cháo Đêm - Phan Bội Châu: 81 m, Bắp Luộc: 82 m
                            ,Tiệm Cơm Sài Gòn 2 - Phan Bội Châu: 84 m';
         $house->image = '';
-        $house->image1 = '';
-        $house->image2 = '';
+
         $house->user_id = 1;
         $house->save();
 
@@ -116,8 +111,7 @@ class houseSeeder extends Seeder
                            Wi-Fi tốc độ cao trong phòng...
                            Mức độ ồn: thấp (khu dân cư yên tĩnh)';
         $house->image = '';
-        $house->image1 = '';
-        $house->image2 = '';
+
         $house->user_id = 1;
         $house->save();
 
@@ -135,8 +129,7 @@ class houseSeeder extends Seeder
                            những quán cafe siêu chất chỉ cần vài bước chân là bạn có thể đến đó!
                            Đường lớn có thể đậu xe hơi và có cả khu để bạn để xe máy nhé.';
         $house->image = '';
-        $house->image1 = '';
-        $house->image2 = '';
+
         $house->user_id = 1;
         $house->save();
 
@@ -155,8 +148,7 @@ class houseSeeder extends Seeder
                            Thời gian check in & check out có thể thay đổi tùy theo nhu cầu của khách. 
                            Giá cả phải chăng không phải lo lắng về sự xô bồ, phức tạp của những ngày lễ tết..';
         $house->image = '';
-        $house->image1 = '';
-        $house->image2 = '';
+
         $house->user_id = 1;
         $house->save();
 
@@ -176,8 +168,7 @@ class houseSeeder extends Seeder
                            và gian bếp lớn luôn để sẵn thức ăn cho thực khách, 
                            nếu bạn muốn tự tay nấu món ăn cho người thương chỉ cần để lại lời nhắn với bạn quản gia là đã sử dụng phần nào là được..';
         $house->image = '';
-        $house->image1 = '';
-        $house->image2 = '';
+
         $house->user_id = 1;
         $house->save();
 
@@ -195,8 +186,7 @@ class houseSeeder extends Seeder
                            Bạn cũng có cơ hội khám phá cuộc sống hàng ngày của người dân địa phương trong hẻm với một số cửa hàng thực phẩm địa phương, 
                            đó là một trải nghiệm thú vị cho bất kỳ người nước ngoài nào.';
         $house->image = '';
-        $house->image1 = '';
-        $house->image2 = '';
+
         $house->user_id = 1;
         $house->save();
 
@@ -218,8 +208,7 @@ class houseSeeder extends Seeder
                            Đặc biệt vào ban đêm, ngay từ sân thượng các bạn có thể thưởng thức nét đẹp nha trang về đêm 
                            và tổ chức bbq sân thượng cùng gia đình và bạn bè.';
         $house->image = '';
-        $house->image1 = '';
-        $house->image2 = '';
+
         $house->user_id = 1;
         $house->save();
 
@@ -236,8 +225,7 @@ class houseSeeder extends Seeder
                            không những thế nằm trên một vị trí lý tưởng cùng với sự yên tĩnh 
                            nơi đây Mountain View Homestay hứa hẹn sẽ là nơi lý tưởng để quý khách thư giãn sau 1 ngày vất vả khám phá mộc châu.';
         $house->image = '';
-        $house->image1 = '';
-        $house->image2 = '';
+
         $house->user_id = 1;
         $house->save();
 

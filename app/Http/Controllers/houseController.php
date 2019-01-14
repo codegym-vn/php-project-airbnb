@@ -52,20 +52,13 @@ class houseController extends Controller
         $house->address = $request->input('address');
         $house->status = $request->input('status');
         $house->description = $request->input('description');
-        if ($request->hasFile('image')) {
-            $image = $request->image;
-            $path = $image->store('images', 'public');
-            $house->image = $path;
-        }
-        if ($request->hasFile('image1')) {
-            $image1 = $request->image1;
-            $path = $image1->store('images', 'public');
-            $house->image1 = $path;
-        }
-        if ($request->hasFile('image2')) {
-            $image2 = $request->image2;
-            $path = $image2->store('images', 'public');
-            $house->image2 = $path;
+        if ($request->hasFile('images')) {
+            $files = [];
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('images', 'public');
+                array_push($files, $path);
+            }
+            $house->image = $files;
         }
         $house->save();
 
@@ -104,51 +97,23 @@ class houseController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, HouseRequest $houseRequest, $id)
+    public function update(Request $request, $id)
     {
         $house = House::findOrFail($id);
-        $house->title = $houseRequest->input('title');
+        $house->title = $request->input('title');
         $house->quantityOfBedroom = $request->input('quantityOfBedroom');
         $house->quantityOfBathroom = $request->input('quantityOfBathroom');
         $house->price = $request->input('price');
         $house->address = $request->input('address');
         $house->status = $request->input('status');
-        $house->description = $houseRequest->input('description');
-        if ($request->hasFile('image')) {
-
-            $currentImg = $house->image;
-            if ($currentImg) {
-                Storage::delete('/public/' . $currentImg);
+        $house->description = $request->input('description');
+        if ($request->hasFile('images')) {
+            $files = [];
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('images', 'public');
+                array_push($files, $path);
             }
-
-            $image = $request->image;
-            $path = $image->store('images', 'public');
-            $house->image = $path;
-
-        }
-        if ($request->hasFile('image1')) {
-
-            $currentImg = $house->image1;
-            if ($currentImg) {
-                Storage::delete('/public/' . $currentImg);
-            }
-
-            $image1 = $request->image1;
-            $path = $image1->store('images', 'public');
-            $house->image1 = $path;
-
-        }
-        if ($request->hasFile('image2')) {
-
-            $currentImg = $house->image2;
-            if ($currentImg) {
-                Storage::delete('/public/' . $currentImg);
-            }
-
-            $image2 = $request->image2;
-            $path = $image2->store('images', 'public');
-            $house->image2 = $path;
-
+            $house->image = $files;
         }
         $house->save();
 
