@@ -19,31 +19,30 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <label>Mô tả</label>
-                        <textarea name="description" class="form-control"
-                                  id="description">{{$house->description}}</textarea>
-                        <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
-                        <script>
-                            CKEDITOR.replace('description');
-                        </script>
-                        @if($errors->has('description'))
-                            <p class="help is-danger" style="color: red;">{{ $errors->first('description') }}</p>
+                        <label>Số lượng phòng ngủ</label>
+                        <input type="number" name="quantityOfBedroom" value="{{$house->quantityOfBedroom}}"
+                               class="form-control"/>
+                        @if($errors->has('quantityOfBedroom'))
+                            <p class="help is-danger" style="color: red;">{{ $errors->first('quantityOfBedroom') }}</p>
                         @endif
                     </div>
                     <div class="form-group">
-                        <label>Nội dung</label>
-                        <textarea name="content" class="form-control" id="content">{{$house->content}}</textarea>
-                        <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
-                        <script>
-                            CKEDITOR.replace('content');
-                        </script>
-                        @if($errors->has('content'))
-                            <p class="help is-danger" style="color: red;">{{ $errors->first('content') }}</p>
+                        <label>Số lượng phòng tắm</label>
+                        <input type="number" name="quantityOfBathroom" value="{{$house->quantityOfBathroom}}"
+                               class="form-control"/>
+                        @if($errors->has('quantityOfBathroom'))
+                            <p class="help is-danger" style="color: red;">{{ $errors->first('quantityOfBathroom') }}</p>
                         @endif
                     </div>
                     <div class="form-group">
-                        <label>Giá phòng</label>
-                        <input type="text" name="price" value="{{$house->price}}" class="form-control"/>
+                        <label>Giá tiền</label>
+                        <div class="input-group">
+                            <input type="text" name="price" value="{{$house->price}}" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                            <div class="input-group-append">
+                                <span class="input-group-text">VND</span>
+                                <span class="input-group-text">1 ngày/đêm</span>
+                            </div>
+                        </div>
                         @if($errors->has('price'))
                             <p class="help is-danger" style="color: red;">{{ $errors->first('price') }}</p>
                         @endif
@@ -73,6 +72,18 @@
                         </div>
                         @if($errors->has('status'))
                             <p class="help is-danger" style="color: red;">{{ $errors->first('status') }}</p>
+                        @endif
+                    </div>
+                    <div class="form-group">
+                        <label>Mô tả</label>
+                        <textarea name="description" class="form-control"
+                                  id="description">{{$house->description}}</textarea>
+                        <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+                        <script>
+                            CKEDITOR.replace('description');
+                        </script>
+                        @if($errors->has('description'))
+                            <p class="help is-danger" style="color: red;">{{ $errors->first('description') }}</p>
                         @endif
                     </div>
                     <div class="form-group">
