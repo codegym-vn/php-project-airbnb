@@ -42,31 +42,34 @@ class houseController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, HouseRequest $houseRequest)
     {
         $house = new House();
-        $house->title = $request->input('title');
-        $house->quantityOfBedroom = $request->input('quantityOfBedroom');
-        $house->quantityOfBathroom = $request->input('quantityOfBathroom');
-        $house->price = $request->input('price');
-        $house->address = $request->input('address');
-        $house->status = $request->input('status');
-        $house->description = $request->input('description');
-        if ($request->hasFile('image')) {
-            $image = $request->image;
-            $path = $image->store('images', 'public');
-            $house->image = $path;
+        $house->title = $houseRequest->input('title');
+        $house->quantityOfBedroom = $houseRequest->input('quantityOfBedroom');
+        $house->quantityOfBathroom = $houseRequest->input('quantityOfBathroom');
+        $house->price = $houseRequest->input('price');
+        $house->address = $houseRequest->input('address');
+        $house->status = $houseRequest->input('status');
+        $house->description = $houseRequest->input('description');
+        if ($request->hasFile('images')) {
+            $files = [];
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('images', 'public');
+                array_push($files, $path);
+            }
+            $house->image = $files;
         }
-        if ($request->hasFile('image1')) {
-            $image1 = $request->image1;
-            $path = $image1->store('images', 'public');
-            $house->image1 = $path;
-        }
-        if ($request->hasFile('image2')) {
-            $image2 = $request->image2;
-            $path = $image2->store('images', 'public');
-            $house->image2 = $path;
-        }
+//        if ($request->hasFile('image1')) {
+//            $image1 = $request->image1;
+//            $path = $image1->store('images', 'public');
+//            $house->image1 = $path;
+//        }
+//        if ($request->hasFile('image2')) {
+//            $image2 = $request->image2;
+//            $path = $image2->store('images', 'public');
+//            $house->image2 = $path;
+//        }
         $house->save();
 
         Session::flash('success', 'Tạo mới thành công!');
@@ -108,48 +111,50 @@ class houseController extends Controller
     {
         $house = House::findOrFail($id);
         $house->title = $houseRequest->input('title');
-        $house->quantityOfBedroom = $request->input('quantityOfBedroom');
-        $house->quantityOfBathroom = $request->input('quantityOfBathroom');
-        $house->price = $request->input('price');
-        $house->address = $request->input('address');
-        $house->status = $request->input('status');
+        $house->quantityOfBedroom = $houseRequest->input('quantityOfBedroom');
+        $house->quantityOfBathroom = $houseRequest->input('quantityOfBathroom');
+        $house->price = $houseRequest->input('price');
+        $house->address = $houseRequest->input('address');
+        $house->status = $houseRequest->input('status');
         $house->description = $houseRequest->input('description');
-        if ($request->hasFile('image')) {
-
-            $currentImg = $house->image;
-            if ($currentImg) {
-                Storage::delete('/public/' . $currentImg);
-            }
-
-            $image = $request->image;
-            $path = $image->store('images', 'public');
-            $house->image = $path;
-
-        }
-        if ($request->hasFile('image1')) {
-
-            $currentImg = $house->image1;
-            if ($currentImg) {
-                Storage::delete('/public/' . $currentImg);
-            }
-
-            $image1 = $request->image1;
-            $path = $image1->store('images', 'public');
-            $house->image1 = $path;
-
-        }
-        if ($request->hasFile('image2')) {
-
-            $currentImg = $house->image2;
-            if ($currentImg) {
-                Storage::delete('/public/' . $currentImg);
-            }
-
-            $image2 = $request->image2;
-            $path = $image2->store('images', 'public');
-            $house->image2 = $path;
-
-        }
+//        if ($request->hasFile('image')) {
+//            foreach ($request->images as $image) {
+//
+//            }
+//            $currentImg = $house->image;
+//            if ($currentImg) {
+//                Storage::delete('/public/' . $currentImg);
+//            }
+//
+//            $image = $request->image;
+//            $path = $image->store('images', 'public');
+//            $house->image = $path;
+//
+//        }
+//        if ($request->hasFile('image1')) {
+//
+//            $currentImg = $house->image1;
+//            if ($currentImg) {
+//                Storage::delete('/public/' . $currentImg);
+//            }
+//
+//            $image1 = $request->image1;
+//            $path = $image1->store('images', 'public');
+//            $house->image1 = $path;
+//
+//        }
+//        if ($request->hasFile('image2')) {
+//
+//            $currentImg = $house->image2;
+//            if ($currentImg) {
+//                Storage::delete('/public/' . $currentImg);
+//            }
+//
+//            $image2 = $request->image2;
+//            $path = $image2->store('images', 'public');
+//            $house->image2 = $path;
+//
+//        }
         $house->save();
 
         Session::flash('success', 'Cập nhập thành công');
