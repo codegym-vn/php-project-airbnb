@@ -59,7 +59,7 @@
                         <div class="form-group">
                             <label>Ảnh</label>
                             <div class="file-loading">
-                            <input type="file" name="image"  multiple class="file"></div>
+                            <input type="file" name="images[]"  multiple class="file"></div>
                             @if($errors->has('image'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
                             @endif

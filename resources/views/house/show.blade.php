@@ -73,9 +73,12 @@
                     <h4 scope="col">Trạng thái :</h4>
                     <p>{{$house->status}}</p>
                     <h4 scope="col">Ảnh :</h4>
-                    <p><img src="{{asset('storage/' . $house->image)}}" style="height:200px; width:200px">
-                        <img src="{{asset('storage/' . $house->image1)}}" style="height:200px; width:200px">
-                        <img src="{{asset('storage/' . $house->image2)}}" style="height:200px; width:200px"></p>
+                    @foreach($house->image as $image)
+                        <img src="{{asset('storage/' . $image)}}" style="height:200px; width:200px">
+                    @endforeach
+                    {{--<p>--}}
+                        {{--<img src="{{asset('storage/' . $house->image1)}}" style="height:200px; width:200px">--}}
+                        {{--<img src="{{asset('storage/' . $house->image2)}}" style="height:200px; width:200px"></p>--}}
 
                 </div>
             </div>

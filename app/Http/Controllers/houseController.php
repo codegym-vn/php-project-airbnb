@@ -23,7 +23,7 @@ class houseController extends Controller
     public function index()
     {
         $houses = House::paginate(3);
-        return view('house.list', compact('houses'));
+        return view('house.list', compact('houses', 'firstImage'));
     }
 
     /**
@@ -51,22 +51,31 @@ class houseController extends Controller
         $house->price = $request->input('price');
         $house->address = $request->input('address');
         $house->status = $request->input('status');
-        if ($request->hasFile('image')) {
-            $image = $request->image;
-            $path = $image->store('images', 'public');
-            $house->image = $path;
+
+        if ($request->hasFile('images')) {
+            $names = [];
+            foreach ($request->images as $image) {
+                $path = $image->store('images', 'public');
+                array_push($names, $path);
+            }
+            $house->image = $names;
+
         }
-        if ($request->hasFile('image1')) {
-            $image1 = $request->image1;
-            $path = $image1->store('images', 'public');
-            $house->image1 = $path;
-        }
-        if ($request->hasFile('image2')) {
-            $image2 = $request->image2;
-            $path = $image2->store('images', 'public');
-            $house->image2 = $path;
-        }
+
+
+
+//        if ($request->hasFile('image1')) {
+//            $image1 = $request->image1;
+//            $path = $image1->store('images', 'public');
+//            $house->image1 = $path;
+//        }
+//        if ($request->hasFile('image2')) {
+//            $image2 = $request->image2;
+//            $path = $image2->store('images', 'public');
+//            $house->image2 = $path;
+//        }
         $house->save();
+        dd($house->image[0]);
 
         Session::flash('success', 'Tạo mới thành công!');
         return redirect(route('house.index'));

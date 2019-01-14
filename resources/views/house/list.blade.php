@@ -58,7 +58,7 @@
                                 <td><a href="{{ route('house.show', $house->id) }}">{{$house->title}}</a></td>
                                 <td>{{number_format($house->price). ' VND'}}</td>
                                 <td>{{$house->status}}</td>
-                                <td><img src="http://127.0.0.1:8000/storage/{{$house->image}}"
+                                <td><img src="http://127.0.0.1:8000/storage/{{$house->image1}}"
                                          style="height:200px; width:200px">
                                 </td>
                             </tr>
