@@ -82,9 +82,7 @@
                     @else
                         {{'Chưa có ảnh'}}
                     @endif
-                    <p>
-                    {{--<img src="{{asset('storage/' . $house->image1)}}" style="height:200px; width:200px">--}}
-                    {{--<img src="{{asset('storage/' . $house->image2)}}" style="height:200px; width:200px"></p>--}}
+
 
                 </div>
             </div>

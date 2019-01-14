@@ -91,14 +91,6 @@
                             @if($errors->has('image'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
                             @endif
-                            {{--<input type="file" name="image1" class="file">--}}
-                            {{--@if($errors->has('image1'))--}}
-                                {{--<p class="help is-danger" style="color: red;">{{ $errors->first('image1') }}</p>--}}
-                            {{--@endif--}}
-                            {{--<input type="file" name="image2" class="file">--}}
-                            {{--@if($errors->has('image2'))--}}
-                                {{--<p class="help is-danger" style="color: red;">{{ $errors->first('image2') }}</p>--}}
-                            {{--@endif--}}
                         </div>
                         <div style="margin-bottom: 50px">
                             <button type="submit" class="btn btn-primary">Thêm mới</button>
