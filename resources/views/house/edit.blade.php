@@ -21,13 +21,16 @@
                     <div class="form-group">
                         <label>Số lượng phòng ngủ</label>
                         <div class="input-group mb-3">
-                            <select class="custom-select" id="inputGroupSelect02" name="quantityOfBedroom" autofocus>
-                                <option selected>Chọn số phòng ngủ</option>
+                            <select class="custom-select" id="bedroom" name="quantityOfBedroom">
                                 <option value="1">1 phòng</option>
                                 <option value="2">2 phòng</option>
                                 <option value="3">3 phòng</option>
                                 <option value="3">4 phòng</option>
                             </select>
+                            <script>
+                                var x = document.getElementById("bedroom").children[{{$house->quantityOfBedroom-1}}];
+                                x.setAttribute("selected", "selected");
+                            </script>
                         </div>
                         @if($errors->has('quantityOfBedroom'))
                             <p class="help is-danger" style="color: red;">{{ $errors->first('quantityOfBedroom') }}</p>
@@ -36,13 +39,17 @@
                     <div class="form-group">
                         <label>Số lượng phòng tắm</label>
                         <div class="input-group mb-3">
-                            <select class="custom-select" id="inputGroupSelect02" name="quantityOfBathroom" autofocus >
+                            <select class="custom-select" id="bathroom" name="quantityOfBathroom">
                                 <option selected>Chọn số phòng tắm</option>
                                 <option value="1">1 phòng</option>
                                 <option value="2">2 phòng</option>
                                 <option value="3">3 phòng</option>
                                 <option value="3">4 phòng</option>
                             </select>
+                            <script>
+                                var y = document.getElementById("bathroom").children[{{$house->quantityOfBathroom}}];
+                                y.setAttribute("selected", "selected");
+                            </script>
                         </div>
                         @if($errors->has('quantityOfBathroom'))
                             <p class="help is-danger" style="color: red;">{{ $errors->first('quantityOfBathroom') }}</p>
