@@ -20,8 +20,10 @@ Route::group(['prefix' => 'house'], function () {
     Route::get('/{id}', 'customerController@showHouse');
 });
 
-Route::get('/user', 'userController@index');
+Route::group(['prefix' => 'order'], function () {
 
-Route::get('/{id}/user', 'userController@show');
+    Route::get('/', 'orderController@index');
 
-Route::post('/user', 'userController@order');
+    Route::post('/store', 'orderController@showHouse');
+});
+
