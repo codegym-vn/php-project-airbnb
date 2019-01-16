@@ -24,6 +24,6 @@ Route::group(['prefix' => 'order'], function () {
 
     Route::get('/', 'orderController@index');
 
-    Route::post('/store', 'orderController@showHouse');
+    Route::post('/', 'orderController@store');
 });
 
