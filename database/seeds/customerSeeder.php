@@ -12,6 +12,12 @@ class customerSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $customer = new Customer();
+        $customer->name = 'Tam';
+        $customer->password = 'asdasd';
+        $customer->email = 'abc@abc.com';
+        $customer->phone = '0935806852';
+        $customer->address = 'My Dinh';
+        $customer->save();
     }
 }

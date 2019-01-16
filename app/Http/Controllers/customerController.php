@@ -8,25 +8,17 @@ use Illuminate\Http\Request;
 
 class customerController extends Controller
 {
-    public function index()
+    public function indexHouse()
     {
         return House::get();
     }
 
-    public function show($id)
+    public function showHouse($id)
     {
         return House::find($id);
     }
 
-    public function order(Request $request)
-    {
-        $customer = new User();
-        $customer->name = $request->name;
-        $customer->email = $request->email;
-        $customer->phone = $request->phone;
 
-
-    }
 
 
 

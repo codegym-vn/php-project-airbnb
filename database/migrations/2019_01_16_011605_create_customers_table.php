@@ -20,8 +20,6 @@ class CreateCustomersTable extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('address');
-            $table->date('checkIn');
-            $table->date('checkOut');
             $table->timestamps();
         });
     }

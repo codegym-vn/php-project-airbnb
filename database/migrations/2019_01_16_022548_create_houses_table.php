@@ -23,8 +23,10 @@ class CreateHousesTable extends Migration
             $table->string('status');
             $table->text('description');
             $table->longText('image');
-//            $table->string('image1');
-//            $table->string('image2');
+            $table->integer('customer_id')->unsigned();
+            $table->foreign('customer_id')->references('id')->on('customers');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
