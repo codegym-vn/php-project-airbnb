@@ -18,6 +18,8 @@ Route::group(['prefix' => 'house'], function () {
     Route::get('/', 'customerController@indexHouse');
 
     Route::get('/{id}', 'customerController@showHouse');
+
+    Route::get('/search', 'customerController@searchHouse');
 });
 
 Route::group(['prefix' => 'order'], function () {
