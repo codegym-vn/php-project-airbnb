@@ -20,4 +20,11 @@ Route::group(['prefix' => 'house'], function () {
     Route::get('/{id}', 'customerController@show');
 
     Route::post('/order', 'customerController@order');
+
 });
+
+Route::get('/user', 'userController@index');
+
+Route::get('/{id}/user', 'userController@show');
+
+Route::post('/user', 'userController@order');
