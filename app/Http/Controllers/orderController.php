@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\House;
 use App\Order;
 use Illuminate\Http\Request;
 
@@ -21,5 +22,9 @@ class orderController extends Controller
         $order->house_id = $request->house_id;
         $order->customer_id = $request->customer_id;
         $order->save();
+
+        $house = House::findOrFail($order->house_id);
+        $house->status = 'Đã cho thuê';
+        $house->save();
     }
 }

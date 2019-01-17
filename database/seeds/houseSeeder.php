@@ -35,7 +35,7 @@ class houseSeeder extends Seeder
         $house->quantityOfBathroom = '2';
         $house->price = '2300000';
         $house->address = 'Sóc Sơn - Hà Nội';
-        $house->status = 'Đã cho thuê';
+        $house->status = 'Chưa cho thuê';
         $house->description = 'La Villa D\' Angelina cung cấp đầy đủ tiện nghi nhất cho bạn và gia đình có những giây phút nghỉ dưỡng tuyệt vời
                            Villa có một điểm cộng cực mạnh đó là có bể bơi vô cực thành kính siêu độc lạ
                            La Villa D\' Angelina rất rộng rãi và có nhiều cây xanh
@@ -69,7 +69,7 @@ class houseSeeder extends Seeder
         $house->quantityOfBathroom = '2';
         $house->price = '1500000';
         $house->address = '15 - Vintage Wooden House - Đà Lạt';
-        $house->status = 'Đã cho thuê';
+        $house->status = 'Chưa cho thuê';
         $house->description = ' Le Bleu đầy tự hào khi được xuất hiện trong nỗi nhớ về Đà Lạt của những bạn khách vô cùng đáng yêu
                             Nơi đây cung cấp cho bạn đầy đủ những nội thất tiện nghi và thoải mái
                             Bạn có thể tổ chức những bữa tiệc nước nướng BBQ ngoài trời
@@ -158,7 +158,7 @@ class houseSeeder extends Seeder
         $house->quantityOfBathroom = '2';
         $house->price = '1400000';
         $house->address = '5B - Room B - Hùng Vương - Đà Lạt';
-        $house->status = 'Đã cho thuê';
+        $house->status = 'Chưa cho thuê';
         $house->description = 'The Windy BnB nằm tại đường Hùng Vương, có vị trí vô cùng thuận lợi trong việc di chuyển khám phá 
                            và check in những địa điểm du lịch nổi tiếng của Đà Lạt 15 phút đi xe máy bạn sẽ tới khu vực Trại Mát 
                            với những khu nông trang, vườn hoa, cà phê view thung lũng đèn lung linh về đêm, 
@@ -178,7 +178,7 @@ class houseSeeder extends Seeder
         $house->quantityOfBathroom = '2';
         $house->price = '1800000';
         $house->address = '11 Trần Hưng Đạo, Cửa Nam, Hoàn Kiếm, Hà Nội';
-        $house->status = 'Đã cho thuê';
+        $house->status = 'Chưa cho thuê';
         $house->description = 'Căn hộ được trang trí đẹp mắt với rất nhiều đồ gốm do các nghệ nhân Việt Nam làm nên căn hộ mang phong cách độc đáo. 
                            Điểm nổi bật là kiến ​​trúc và thiết kế của nhà Đông Dương khiến cho bạn có những kỷ niệm khó quên ở Hà Nội. 
                            Bản thân ngôi nhà được sở hữu và thiết kế bởi một kiến ​​trúc sư tài năng nên mọi thứ đều được suy nghĩ kỹ lưỡng.

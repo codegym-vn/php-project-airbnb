@@ -22,6 +22,7 @@ class houseController extends Controller
      */
     public function index()
     {
+
         $houses = House::orderBy('created_at', 'desc')->paginate(3);
         return view('house.list', compact('houses'));
     }
@@ -74,7 +75,8 @@ class houseController extends Controller
      */
     public function show($id)
     {
-        $house = House::findOrFail($id);
+        $house = House::with('orders')->find($id);
+//        dd($house->orders[0]->checkIn);
         return view('house.show', compact('house'));
     }
 

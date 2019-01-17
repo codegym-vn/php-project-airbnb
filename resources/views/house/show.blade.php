@@ -70,8 +70,17 @@
                     <p>{{number_format($house->price) . ' VND' . ' ' .'/ đêm'}}</p>
                     <h4 scope="col">Địa chỉ :</h4>
                     <p>{{$house->address}}</p>
-                    <h4 scope="col">Trạng thái :</h4>
-                    <p>{{$house->status}}</p>
+                    @if($house->status === 'Đã cho thuê')
+                        <h4 scope="col">Trạng thái :</h4>
+                        <p style="color: green">{{$house->status}}</p>
+                        <h4 scope="col">Check in :</h4>
+                        <p>{{$house->orders[0]->checkIn}}</p>
+                        <h4 scope="col">Check out :</h4>
+                        <p>{{$house->orders[0]->checkOut}}</p>
+                    @else
+                        <h4 scope="col">Trạng thái :</h4>
+                        <p style="color: red">{{$house->status}}</p>
+                    @endif
                     <h4 scope="col">Mô tả :</h4>
                     <p>{!! $house->description !!}</p>
                     <h4 scope="col">Ảnh :</h4>
