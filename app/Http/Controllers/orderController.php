@@ -18,6 +18,8 @@ class orderController extends Controller
         $order->checkIn = $request->checkIn;
         $order->checkOut = $request->checkOut;
         $order->totalPrice = $request->totalPrice;
+        $order->house_id = $request->house_id;
+        $order->customer_id = $request->customer_id;
         $order->save();
     }
 }

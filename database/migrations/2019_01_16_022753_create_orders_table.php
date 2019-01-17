@@ -17,8 +17,8 @@ class CreateOrdersTable extends Migration
             $table->increments('id');
             $table->date('checkIn');
             $table->date('checkOut');
-            $table->integer('totalPrice');
-            $table->integer('customer_id')->unsigned();
+            $table->integer('totalPrice')->nullable();
+            $table->integer('customer_id')->unsigned()->nullable();
             $table->foreign('customer_id')->references('id')->on('customers');
             $table->integer('house_id')->unsigned();
             $table->foreign('house_id')->references('id')->on('houses');
