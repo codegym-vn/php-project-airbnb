@@ -19,4 +19,9 @@ class House extends Model
         'image' => 'array'
     ];
 
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
+
 }

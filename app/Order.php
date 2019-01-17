@@ -9,4 +9,9 @@ class Order extends Model
     protected $fillable = [
         'checkIn', 'checkOut', 'totalPrice', 'customer_id', 'house_id'
     ];
+
+    public function houses()
+    {
+        return $this->belongsTo('App\House');
+    }
 }
