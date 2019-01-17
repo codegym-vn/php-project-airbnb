@@ -31,3 +31,10 @@ Route::get('/customer', 'customerController@index');
 Route::get('/{id}/customer', 'customerController@show');
 
 Route::post('/customer', 'customerController@customer');
+
+Route::get('/login', 'loginController@index');
+
+Route::get('/{id}/login', 'loginController@show');
+
+Route::post('/login', 'loginController@login');
+
