@@ -25,3 +25,9 @@ Route::get('/user', 'userController@index');
 Route::get('/{id}/user', 'userController@show');
 
 Route::post('/user', 'userController@order');
+
+Route::get('/customer', 'customerController@index');
+
+Route::get('/{id}/customer', 'customerController@show');
+
+Route::post('/customer', 'customerController@customer');
