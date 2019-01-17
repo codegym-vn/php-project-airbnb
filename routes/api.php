@@ -19,7 +19,7 @@ Route::group(['prefix' => 'house'], function () {
 
     Route::get('/{id}', 'customerController@showHouse');
 
-    Route::get('/search', 'customerController@searchHouse');
+    Route::get('/search/{keyword}', 'customerController@searchHouse');
 });
 
 Route::group(['prefix' => 'order'], function () {
