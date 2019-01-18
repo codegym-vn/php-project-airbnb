@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-header">Thây đổi thông tin </div>
+                    <div class="card-header">Thay đổi thông tin </div>
 
                     <div class="card-body">
                         @if (session('error'))
