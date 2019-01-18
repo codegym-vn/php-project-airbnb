@@ -55,7 +55,12 @@
                             <tr>
                                 <td><a href="{{ route('house.show', $house->id) }}">{{$house->title}}</a></td>
                                 <td>{{number_format($house->price). ' VND'}}</td>
-                                <td>{{$house->status}}</td>
+                                <td>@if($house->status === 'Đã cho thuê')
+                                        <p style="color: green">{{$house->status}}</p>
+                                    @else
+                                        <p style="color: red">{{$house->status}}</p>
+                                    @endif
+                                </td>
                                 <td>
                                     @if($house->image)
                                         <img src="{{asset('storage/' . $house->image[0])}}" style="height:200px; width:200px">
