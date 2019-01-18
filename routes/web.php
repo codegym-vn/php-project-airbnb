@@ -28,3 +28,5 @@ Route::group(['prefix' => 'house/admin'], function () {
     Route::get('/delete/{id}', 'houseController@destroy')->name('house.destroy');
     Route::get('/search', 'houseController@search')->name('house.search');
 });
+Route::get('/changePassword', 'Auth\ChangePasswordController@index')->name('changePassword.index');
+Route::post('/changePassword', 'Auth\ChangePasswordController@store')->name('changePassword.store');
