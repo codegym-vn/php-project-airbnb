@@ -73,6 +73,9 @@
                                 <a class="dropdown-item" href="{{ route('changePassword.index')}}">
                                     Change Password
                                 </a>
+                                <a class="dropdown-item" href="{{ route('changeProfile.index')}}">
+                                    Change Profile
+                                </a>
                             </div>
                         </li>
                     @endguest

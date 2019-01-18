@@ -30,3 +30,5 @@ Route::group(['prefix' => 'house/admin'], function () {
 });
 Route::get('/changePassword', 'Auth\ChangePasswordController@index')->name('changePassword.index');
 Route::post('/changePassword', 'Auth\ChangePasswordController@store')->name('changePassword.store');
+Route::get('/changeProfile', 'Auth\ChangeProfileController@index')->name('changeProfile.index');
+Route::post('/changeProfile', 'Auth\ChangeProfileController@store')->name('changeProfile.store');
