@@ -67,7 +67,7 @@
                     <h4 scope="col">Số lượng phòng tắm :</h4>
                     <p>{{$house->quantityOfBathroom . ' ' . 'phòng'}}</p>
                     <h4 scope="col">Giá phòng :</h4>
-                    <p>{{number_format($house->price) . ' VND' . ' ' .'/ đêm'}}</p>
+                    <p>{{number_format($house->price, 0, ',', '.') . ' VND' . ' ' .'/ đêm'}}</p>
                     <h4 scope="col">Địa chỉ :</h4>
                     <p>{{$house->address}}</p>
                     @if($house->status === 'Đã cho thuê')

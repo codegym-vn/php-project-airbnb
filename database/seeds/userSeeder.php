@@ -17,6 +17,7 @@ class userSeeder extends Seeder
         $user->email = 'alexnguyen17@gmail.com';
         $user->password = Hash::make('alexnguyen');
         $user->phone = '0976681499';
+        $user->address = 'Thanh Hoa';
         $user->role = '1';
         $user->save();
 
@@ -25,6 +26,7 @@ class userSeeder extends Seeder
         $user->email = 'manhsanhcong.08@gmail.com';
         $user->password = Hash::make('manhsanhcong');
         $user->phone = '5664133150';
+        $user->address = 'Hai Phong';
         $user->role = '1';
         $user->save();
 
@@ -33,6 +35,7 @@ class userSeeder extends Seeder
         $user->email = 'abc@gmail.com';
         $user->password = Hash::make('asdasd');
         $user->phone = '0976681499';
+        $user->address = 'Da Nang';
         $user->role = '1';
         $user->save();
     }
