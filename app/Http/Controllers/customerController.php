@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\House;
+use App\User;
+use Illuminate\Http\Request;
 
 class customerController extends Controller
 {
@@ -34,5 +36,16 @@ class customerController extends Controller
         }
 
         return response()->json($houses);
+    }
+
+    public function storeRegister(Request $request)
+    {
+        $customer = new User();
+        $customer->name = $request->name;
+        $customer->email = $request->email;
+        $customer->password = $request->password;
+        $customer->phone = $request->phone;
+        $customer->address = $request->address;
+        $customer->save();
     }
 }
