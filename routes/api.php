@@ -29,3 +29,7 @@ Route::group(['prefix' => 'order'], function () {
     Route::post('/', 'orderController@store');
 });
 
+Route::group(['prefix' => 'customer'], function () {
+
+    Route::post('/', 'customerController@storeRegister');
+});

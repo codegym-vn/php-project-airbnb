@@ -54,7 +54,7 @@
                         @foreach($houses as $key => $house)
                             <tr>
                                 <td><a href="{{ route('house.show', $house->id) }}">{{$house->title}}</a></td>
-                                <td>{{number_format($house->price). ' VND'}}</td>
+                                <td>{{number_format($house->price, 0, ',', '.') . ' VND'}}</td>
                                 <td>@if($house->status === 'Đã cho thuê')
                                         <p style="color: green">{{$house->status}}</p>
                                     @else
