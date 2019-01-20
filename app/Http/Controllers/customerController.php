@@ -46,6 +46,7 @@ class customerController extends Controller
         $customer->password = $request->password;
         $customer->phone = $request->phone;
         $customer->address = $request->address;
+        $customer->role = 2;
         $customer->save();
     }
 }
