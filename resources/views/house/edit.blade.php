@@ -131,8 +131,10 @@
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
                             @endif
                         </div>
+                        <div style="margin-bottom: 30px">
                         <button type="submit" class="btn btn-primary">Cập nhật</button>
                         <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Hủy</button>
+                        </div>
                     </form>
                 </div>
             </div>
