@@ -43,7 +43,7 @@ class houseController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(HouseRequest $request)
     {
         $house = new House();
         $house->title = $request->input('title');
@@ -51,6 +51,7 @@ class houseController extends Controller
         $house->quantityOfBathroom = $request->input('quantityOfBathroom');
         $house->price = $request->input('price');
         $house->address = $request->input('address');
+        $house->user_id = $request->input('user_id');
         $house->status = $request->input('status');
         $house->description = $request->input('description');
         if ($request->hasFile('images')) {
@@ -99,7 +100,7 @@ class houseController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(HouseRequest $request, $id)
     {
         $house = House::findOrFail($id);
         $house->title = $request->input('title');
@@ -132,10 +133,6 @@ class houseController extends Controller
     public function destroy($id)
     {
         $house = House::findOrFail($id);
-        $image = $house->image;
-        if ($image) {
-            Storage::delete('/public/' . $image);
-        }
         $house->delete();
 
         Session::flash('delete', 'Bạn đã xóa thành công!');

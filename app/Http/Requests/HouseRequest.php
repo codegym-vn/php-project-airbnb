@@ -31,9 +31,7 @@ class HouseRequest extends FormRequest
             'address' => 'required|min:5',
             'status' => 'required',
             'description' => 'required|min:5',
-            'image' => 'required',
-
-
+            'image' => 'sometimes|required',
         ];
     }
 }

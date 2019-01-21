@@ -5,7 +5,7 @@
         <div class="col-12 col-md-12">
             <div class="row">
                 <div class="col-12">
-                    <h1>Đăng thông tin nhà mới</h1>
+                    <h1 style="text-align: center">Đăng thông tin nhà mới</h1>
                 </div>
                 <div class="col-12">
                     <form method="post" action="{{route('house.store')}}" enctype="multipart/form-data">
@@ -68,11 +68,12 @@
                         </div>
                         <div class="form-group">
                             <label>Địa chỉ</label>
-                            <textarea type="text" name="address" class="form-control"></textarea>
+                            <input type="text" name="address" class="form-control">
                             @if($errors->has('address'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('address') }}</p>
                             @endif
                         </div>
+                        <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                         <div class="form-group">
                             <label>Mô tả</label>
                             <textarea name="description" class="form-control" id="description"></textarea>
