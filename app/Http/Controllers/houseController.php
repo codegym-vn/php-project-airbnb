@@ -54,9 +54,10 @@ class houseController extends Controller
         $house->user_id = $request->input('user_id');
         $house->status = $request->input('status');
         $house->description = $request->input('description');
-        if ($request->hasFile('images')) {
+//        dd($request->images);
+        if ($request->hasFile('image')) {
             $files = [];
-            foreach ($request->file('images') as $image) {
+            foreach ($request->file('image') as $image) {
                 $path = $image->store('images', 'public');
                 array_push($files, $path);
             }
@@ -110,9 +111,9 @@ class houseController extends Controller
         $house->address = $request->input('address');
         $house->status = $request->input('status');
         $house->description = $request->input('description');
-        if ($request->hasFile('images')) {
+        if ($request->hasFile('image')) {
             $files = [];
-            foreach ($request->file('images') as $image) {
+            foreach ($request->file('image') as $image) {
                 $path = $image->store('images', 'public');
                 array_push($files, $path);
             }

@@ -21,7 +21,7 @@
                             <label>Số lượng phòng ngủ</label>
                             <div class="input-group mb-3">
                                 <select class="custom-select" id="inputGroupSelect02" name="quantityOfBedroom">
-                                    <option selected>Chọn số phòng ngủ</option>
+                                    <option value="">Chọn số phòng ngủ</option>
                                     <option value="1">1 phòng</option>
                                     <option value="2">2 phòng</option>
                                     <option value="3">3 phòng</option>
@@ -37,9 +37,9 @@
                             <label>Số lượng phòng tắm</label>
                             <div class="input-group mb-3">
                                 <select class="custom-select" id="inputGroupSelect02" name="quantityOfBathroom">
-                                    <option selected>Chọn số phòng tắm</option>
+                                    <option value="">Chọn số phòng tắm</option>
                                     <option value="1">1 phòng</option>
-                                    <option value="2">2 phòng</option>
+                                    <option value="2" >2 phòng</option>
                                     <option value="3">3 phòng</option>
                                     <option value="3">4 phòng</option>
                                 </select>
@@ -88,7 +88,7 @@
                         <div class="form-group">
                             <label>Ảnh</label>
                             <div class="file-loading">
-                                <input type="file" name="images[]" multiple class="file"></div>
+                                <input type="file" name="image[]" class="file" multiple></div>
                             @if($errors->has('image'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
                             @endif
@@ -103,4 +103,5 @@
             </div>
         </div>
     </div>
+
 @endsection
