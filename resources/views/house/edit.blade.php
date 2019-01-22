@@ -120,13 +120,17 @@
                                 @foreach($house->image as $image)
                                     <img src="{{asset('storage/' . $image)}}" style="height:50px; width:50px">
                                 @endforeach
-                            @else
-                                {{'Chưa có ảnh'}}
                             @endif
-                            <div class="file-loading">
-                                <input type="file" name="images[]"
-                                       class="file" multiple/>
+                            <div class="file-loading image-input">
+                                <input type="file" name="image[]" class="file image-file" accept="image/*" multiple/>
                             </div>
+                            <script>
+                                document.querySelector('image-input')
+                                    .addEventListener('drop', (ev) => {
+                                        ev.preventDefault();
+                                        document.querySelector('.image-file').files = ev.dataTransfer.files;
+                                    });
+                            </script>
                             @if($errors->has('image'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
                             @endif
