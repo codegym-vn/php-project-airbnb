@@ -43,8 +43,18 @@ class houseController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(HouseRequest $request)
+    public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required|min:5',
+            'quantityOfBedroom' => 'required',
+            'quantityOfBathroom' => 'required',
+            'price' => 'required|numeric',
+            'address' => 'required|min:5',
+            'status' => 'required',
+            'description' => 'required|min:5',
+            'image.*' => 'required',
+        ]);
         $house = new House();
         $house->title = $request->input('title');
         $house->quantityOfBedroom = $request->input('quantityOfBedroom');
@@ -101,8 +111,18 @@ class houseController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(HouseRequest $request, $id)
+    public function update(Request $request, $id)
     {
+        $request->validate([
+            'title' => 'required|min:5',
+            'quantityOfBedroom' => 'required',
+            'quantityOfBathroom' => 'required',
+            'price' => 'required|numeric',
+            'address' => 'required|min:5',
+            'status' => 'required',
+            'description' => 'required|min:5',
+            'photo.*' => 'sometimes|mimes:jpeg,jpg,png',
+        ]);
         $house = House::findOrFail($id);
         $house->title = $request->input('title');
         $house->quantityOfBedroom = $request->input('quantityOfBedroom');
@@ -111,9 +131,9 @@ class houseController extends Controller
         $house->address = $request->input('address');
         $house->status = $request->input('status');
         $house->description = $request->input('description');
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('photo')) {
             $files = [];
-            foreach ($request->file('image') as $image) {
+            foreach ($request->file('photo') as $image) {
                 $path = $image->store('images', 'public');
                 array_push($files, $path);
             }

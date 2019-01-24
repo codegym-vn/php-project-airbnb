@@ -105,34 +105,26 @@
                             <label>Mô tả</label>
                             <textarea name="description" class="form-control"
                                       id="description">{{$house->description}}</textarea>
-                            <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
-                            <script>
-                                CKEDITOR.replace('description');
-                            </script>
+                            {{--<script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>--}}
+                            {{--<script>--}}
+                                {{--CKEDITOR.replace('description');--}}
+                            {{--</script>--}}
                             @if($errors->has('description'))
                                 <p class="help is-danger" style="color: red;">{{ $errors->first('description') }}</p>
                             @endif
                         </div>
                         <div class="form-group">
                             <label>Ảnh</label><br>
-
                             @if($house->image)
                                 @foreach($house->image as $image)
                                     <img src="{{asset('storage/' . $image)}}" style="height:50px; width:50px">
                                 @endforeach
                             @endif
-                            <div class="file-loading image-input">
-                                <input type="file" name="image[]" class="file image-file" accept="image/*" multiple/>
+                            <div class="file-loading">
+                                <input type="file" name="photo[]" class="file" multiple/>
                             </div>
-                            <script>
-                                document.querySelector('image-input')
-                                    .addEventListener('drop', (ev) => {
-                                        ev.preventDefault();
-                                        document.querySelector('.image-file').files = ev.dataTransfer.files;
-                                    });
-                            </script>
-                            @if($errors->has('image'))
-                                <p class="help is-danger" style="color: red;">{{ $errors->first('image') }}</p>
+                            @if($errors->has('photo'))
+                                <p class="help is-danger" style="color: red;">{{ $errors->first('photo') }}</p>
                             @endif
                         </div>
                         <div style="margin-bottom: 30px">

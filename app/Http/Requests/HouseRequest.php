@@ -31,7 +31,16 @@ class HouseRequest extends FormRequest
             'address' => 'required|min:5',
             'status' => 'required',
             'description' => 'required|min:5',
-            'image' => 'required|image',
+            'image' => 'required',
+            'imageEdit' => 'mimes:jpeg,bmp,png',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'image.required' => 'REQUIRED',
+            'imageEdit.mimes' => 'PHOTO',
         ];
     }
 }
