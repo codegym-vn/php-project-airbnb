@@ -53,7 +53,7 @@ class houseController extends Controller
             'address' => 'required|min:5',
             'status' => 'required',
             'description' => 'required|min:5',
-            'image.*' => 'required',
+            'image' => 'required',
         ]);
         $house = new House();
         $house->title = $request->input('title');
@@ -88,7 +88,6 @@ class houseController extends Controller
     public function show($id)
     {
         $house = House::with('orders')->find($id);
-//        dd($house->orders[0]->checkIn);
         return view('house.show', compact('house'));
     }
 
@@ -166,8 +165,18 @@ class houseController extends Controller
         if (!$keyword) {
             return redirect()->route('house.index');
         }
-        $houses = House::where('title', 'LIKE', '%' . $keyword . '%')->paginate(3);
-
-        return view('house.list', compact('houses'));
+        $titleSearch = $request->input('titleSearch');
+        switch ($titleSearch) {
+            case '1':
+                $houses = House::where('title', 'LIKE', '%' . $keyword . '%')->paginate(3);
+                break;
+            case '2':
+                $houses = House::where('price', 'LIKE', '%' . $keyword . '%')->paginate(3);
+                break;
+            default:
+                $houses = House::where('status', 'LIKE', '%' . $keyword . '%')->paginate(3);
+                break;
+        }
+        return view('house.list', compact('houses', 'keyword'));
     }
 }
