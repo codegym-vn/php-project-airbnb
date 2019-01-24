@@ -44,7 +44,7 @@
     <div class="container">
         <div class="col-12">
             <div class="row">
-                <div class="col-12"><h1 style="text-align: center">My House</h1></div>
+                <div class="col-12"><h1 style="text-align: center">{{$house->title}}</h1></div>
                 <div>
                     <div class="col-12" style="margin-left: 1000px">
                         <a class="btn btn-success" href="{{ route('house.edit', $house->id) }}">Sửa</a>
@@ -60,8 +60,6 @@
                             </p>
                         @endif
                     </div>
-                    <h4 scope="col">Tên nhà :</h4>
-                    <p>{{$house->title}}</p>
                     <h4 scope="col">Số lượng phòng ngủ :</h4>
                     <p>{{$house->quantityOfBedroom  . ' ' . 'phòng'}}</p>
                     <h4 scope="col">Số lượng phòng tắm :</h4>
