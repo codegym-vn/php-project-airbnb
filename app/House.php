@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class House extends Model
 {
     protected $fillable = [
-        'title', 'description', 'quantityOfBedroom', 'quantityOfBathroom','price', 'address', 'status', 'image', 'customer_id', 'user_id'
+        'title', 'description', 'quantityOfBedroom', 'quantityOfBathroom', 'price', 'address', 'status', 'image', 'customer_id', 'user_id'
     ];
 
     public function user()
@@ -23,5 +23,18 @@ class House extends Model
     {
         return $this->hasMany('App\Order');
     }
+
+    private static $singleObj = null;
+
+
+//    public static function createSingletonObject()
+//    {
+//        if (self::$singleObj !== null) {
+//            return self::$singleObj;
+//        }
+//
+//        self::$singleObj = new self();
+//        return self::$singleObj;
+//    }
 
 }
