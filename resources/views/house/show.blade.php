@@ -60,14 +60,6 @@
                             </p>
                         @endif
                     </div>
-                    <h4 scope="col">Số lượng phòng ngủ :</h4>
-                    <p>{{$house->quantityOfBedroom  . ' ' . 'phòng'}}</p>
-                    <h4 scope="col">Số lượng phòng tắm :</h4>
-                    <p>{{$house->quantityOfBathroom . ' ' . 'phòng'}}</p>
-                    <h4 scope="col">Giá phòng :</h4>
-                    <p>{{number_format($house->price, 0, ',', '.') . ' VND' . ' ' .'/ đêm'}}</p>
-                    <h4 scope="col">Địa chỉ :</h4>
-                    <p>{{$house->address}}</p>
                     @if($house->status === 'Đã cho thuê')
                         <h4 scope="col">Trạng thái :</h4>
                         <p style="color: green">{{$house->status}}</p>
@@ -79,6 +71,14 @@
                         <h4 scope="col">Trạng thái :</h4>
                         <p style="color: red">{{$house->status}}</p>
                     @endif
+                    <h4 scope="col">Số lượng phòng ngủ :</h4>
+                    <p>{{$house->quantityOfBedroom  . ' ' . 'phòng'}}</p>
+                    <h4 scope="col">Số lượng phòng tắm :</h4>
+                    <p>{{$house->quantityOfBathroom . ' ' . 'phòng'}}</p>
+                    <h4 scope="col">Giá phòng :</h4>
+                    <p>{{number_format($house->price, 0, ',', '.') . ' VND' . ' ' .'/ đêm'}}</p>
+                    <h4 scope="col">Địa chỉ :</h4>
+                    <p>{{$house->address}}</p>
                     <h4 scope="col">Mô tả :</h4>
                     <p>{!! $house->description !!}</p>
                     <h4 scope="col">Ảnh :</h4>
