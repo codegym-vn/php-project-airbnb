@@ -4,8 +4,8 @@
 ### Tạo file .env và kết nối database 
 ```cp .env.example .env```
 ### Tạo migrate và seed  
-```php artisan migrate```
-```php artisan db:seed```
+```php artisan migrate --seed```
+
 ### Tạo key  
 ```php artisan key:generate```
 ### Tạo storage link 
